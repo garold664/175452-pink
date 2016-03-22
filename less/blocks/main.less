@@ -1,5 +1,29 @@
 .main {
+  &_photo {
+  }
   &__title {
+    .outline(#0f0,'.main__title');
+    min-height: 215px;
+    .container;
+    padding: 6px 58px 30px;
+  }
+}
 
+
+@media @tablet-widths {
+  .main{
+    &__title {
+      min-height: 240px;
+      padding-bottom: 46px;
+    }
+  }
+}
+
+
+@media @desktop-widths {
+  .main{
+    &__title {
+      min-height: 320px;
+    }
   }
 }

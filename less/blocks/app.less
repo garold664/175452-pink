@@ -1,6 +1,10 @@
 .app {
+  .outline(#f00,".app");
+  min-height: 270px;
+  /*
   color: #fff;
   background-color: #1d2631;
+  */
   &__btn {
     display: inline-block;
     border: 3px solid #fff;
@@ -22,5 +26,16 @@
   }
   &__description {
 
+  }
+}
+
+@media @tablet-widths {
+  .app {
+    width: 300px;
+  }
+}
+@media @desktop-widths {
+  .app {
+    min-height: 330px;
   }
 }

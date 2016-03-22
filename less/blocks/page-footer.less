@@ -1,14 +1,44 @@
 .page-footer {
-  &__title {
+  .outline(#0d0,'.page-footer');
+  .container;
+  min-height: 230px;
+  display: none;
+  &_form, &_photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
+  }
+  > div {
+    min-height: 50px;
+    width: 200px;
   }
   &__logo {
-
+    .outline(#d0c,'.page-footer__logo');
+  }
+  &__social {
+    .outline(#d0c,'.page-social');
   }
   &__made-in {
-
+    .outline(#d0c,'.page-footer__made-in');
   }
   &__made-in-link {
 
+  }
+}
+
+@media @tablet-widths {
+  .page-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 125px;
+  }
+}
+@media @desktop-widths {
+  .page-footer {
+    min-height: 193px;
   }
 }

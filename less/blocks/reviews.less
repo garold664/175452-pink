@@ -1,8 +1,28 @@
 .reviews {
+  .outline(#0c0, '.reviews');
+  .container;
+  padding-top: 48px;
+  padding-bottom: 38px;
+  min-height: 352px;
   &__reviewer {
 
   }
   &__text {
 
+  }
+}
+
+@media @tablet-widths {
+  .reviews {
+    padding-top: 40px;
+    padding-bottom: 15px;
+    min-height: 288px;
+  }
+}
+
+@media @desktop-widths {
+  .reviews {
+    padding: 188px 130px 48px;
+    min-height: 415px;
   }
 }

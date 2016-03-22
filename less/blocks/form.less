@@ -1,8 +1,36 @@
 .form {
+  display: flex;
+  flex-direction: column;
   &__section {
-    &_gray {
-      background-color: #f2f2f2;
+    .outline(#0ff,'.form_section');
+    min-height: 380px;
+    &_name {
+      .container;
     }
+    &_attainments {
+      min-height: 610px;
+    }
+    &_contacts {
+      min-height: 300px;
+      .container;
+    }
+    &_app {
+      min-height: 330px;
+    }
+    &_emotions {
+      min-height: 320px;
+      .container;
+    }
+    &_gray {
+      /*
+      background-color: #f2f2f2;
+      */
+    }
+  }
+  &__section-wrapper {
+    min-height: 100px;
+    .outline(#147efb,'__section-wrapper',80);
+    .container;
   }
   &__text-label {
     color: #d22856;
@@ -11,6 +39,8 @@
 
   }
   &__section-title {
+      font-size: 14px;
+      text-transform: uppercase;
       color: #d22856;
   }
   &__checkbox-label {
@@ -28,7 +58,62 @@
   &__textarea {
 
   }
+  &__footer {
+    .outline(#fc3936,'.form__footer');
+    min-height: 200px;
+    .container;
+  }
   &__submit {
 
+  }
+}
+
+
+@media @tablet-widths {
+    .form {
+    &__section {
+      &_name {
+        order: -4;
+      }
+      &_attinments {
+        min-height: 610px;
+        order: -1;
+      }
+      &_contacts {
+        min-height: 410px;
+        order: -2;
+      }
+      &_app {
+        min-height: 312px;
+        order: -3;
+      }
+    }
+  }
+}
+
+@media @desktop-widths {
+  .form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 940px;
+    margin: auto;
+    &__section {
+      &_name {
+        width: 50%;
+      }
+      &_app {
+        width: 50%;
+      }
+      &_app > div {
+        width: auto;
+      }
+      &_contacts {
+        min-height: 200px;
+      }
+      &_attainments {
+        min-height: 250px;
+      }
+    }
   }
 }

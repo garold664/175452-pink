@@ -1,5 +1,7 @@
 .page-nav {
-  background-color: #283645;
+  .outline(#f00,'.page-nav');
+  min-height: 257px;/*
+  background-color: #283645;*/
   &__toggle {
 
   }
@@ -19,5 +21,12 @@
   }
   &__link {
     color: #fff;
+  }
+}
+
+@media @desktop-widths {
+  .page-nav {
+    min-height: auto;
+    width: 620px;
   }
 }

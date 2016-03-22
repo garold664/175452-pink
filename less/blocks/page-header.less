@@ -1,12 +1,118 @@
 .page-header {
+  .outline(#f00,'.page-header', 60);
+  /*
   background-color: #1d2631;
   background-image: url(../img/bg-back-mobile.jpg);
+  */
   &__head-line {
+    .outline(#0f0,'.page-header__head-line', 40);
+    .clearfix;
+    padding: 20px;
+    /*
     background-color: #1d2631;
     opacity: 0.5;
+    */
+  }
+  &__head-line-wrapper {
+    .outline(#f00,'__head-line-wrapper');
+    .container;
+    .clearfix;
+  }
+  &__nav-button {
+    .outline(#f50,'__nav-button');
+    width: 50px;
+    height: 24px;
+    float: right;
+  }
+  &__container {
+    .container;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
   &__slogan {
+    .outline(#0f9, '.page-header__slogan');
+    min-height: 90px;
     color: #fff;
+    &_form {
+      min-height: 172px;
+    }
+    &_photo {
+      min-height: 172px;
+    }
+  }
+  &__pic {
+    .outline(#008,'.page-header__pic');
+    width: 257px;
+    height: 300px;
+    margin-left: -20px;
   }
 }
 
+@media @tablet-widths {
+  .page-header {
+    .clearfix();
+    &__head-line {
+      padding: 25px 40px 40px;
+    }
+    &__nav-button {
+      margin-top: 20px;
+    }
+    &__container {
+      max-height: 700px;
+      margin-top: 52px;
+    }
+    &__pic {
+      order: 1;
+      width: 470px;
+      min-height: 570px;
+    margin-left: -150px;
+    }
+    &__slogan {
+      width: 300px;
+      min-height: 200px;
+      &_form, &_photo {
+        min-height: 332px;
+        width: auto;
+      }
+    }
+  }
+}
+
+@media @desktop-widths {
+  .page-header {
+    &__nav-wrapper {
+      .outline(#00f,'__nav-wrapper');
+      padding: 25px 0 40px;
+    }
+    &__inner {
+      .outline(#0f0,'__nav-wrapper');
+      width: 940px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__head-line {
+      padding: 0;
+    }
+    &__head-line-wrapper {
+      width: auto;
+    }
+    &__nav-button {
+      display: none;
+    }
+    &__container {
+      margin-top: 100px;
+    }
+    &__pic {
+      width: 560px;
+      height: 645px;
+      margin: 0;
+    }
+    &__slogan {
+      &_form {
+        min-height: 285px;
+      }
+    }
+  }
+}

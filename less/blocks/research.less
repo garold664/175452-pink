@@ -1,0 +1,31 @@
+.research {
+  .outline(#cc0,'.research');
+  &__wrapper{
+    .outline(#f00,'.research__wrapper');
+    display: none;
+    .container;
+  }
+
+}
+
+@media @tablet-widths {
+  .research {
+    &__wrapper {
+      display: block;
+      min-height: 400px;
+      padding-left: 310px;
+      padding-top: 105px;
+    }
+  }
+}
+
+
+@media @desktop-widths {
+  .research {
+    &__wrapper {
+      min-height: 470px;
+      padding-left: 365px;
+      padding-top: 152px;
+    }
+  }
+}

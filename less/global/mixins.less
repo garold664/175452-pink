@@ -1,0 +1,39 @@
+.clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.container {
+  width: 280px;
+  margin: auto;
+
+  @media @tablet-widths {
+    width: 620px;
+  }
+
+  @media @desktop-widths {
+    width: 940px;
+  }
+}
+.outline(@color, @caption, @indent: 0) {
+  position: relative;
+  outline: 3px solid fadeout(@color,30%);
+  &::before {
+      content: @caption;
+      position: absolute;
+      right: 25px + @indent;
+      background-color: @color;
+      color: #fff;
+      font-size: 16px;
+      opacity: 0.8;
+      display: inline-block;
+    }
+}
+
+.highlighter {
+  background: rgba(255,0,0,0.1);
+  background-clip: content-box;
+}

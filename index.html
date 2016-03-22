@@ -2,216 +2,110 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="page">
+<body>
   <header class="page-header">
-    <div class="page-header__head-line">
-      <a class="logo" href="#">
-        <img class="logo__img" src="icons/logo.svg" alt="Pink" width="75" height="22">
-      </a>
-      <nav class="page-nav">
-        <a href="#" class="page-nav__toggle page-nav__toggle_closed"></a>
-        <div class="page-nav__wrapper page-nav__wrapper_closed">
-          <ul class="page-nav__list">
-            <li class="page-nav__item item">
-              <a class="page-nav__close-btn" href="#"></a>
-            </li>
-            <li class="page-nav__item item">
-              <a class="page-nav__link link" href="#">Информация</a>
-            </li>
-            <li class="page-nav__item item">
-              <a class="page-nav__link link" href="#">Возможности</a>
-            </li>
-            <li class="page-nav__item item">
-              <a class="page-nav__link link" href="#">Отзывы</a>
-            </li>
-            <li class="page-nav__item item">
-              <a class="page-nav__link link" href="#">Стоимость</a>
-            </li>
-          </ul>
+    <div class="page-header__nav-wrapper">
+      <div class="page-header__inner">
+        <div class="page-header__head-line page-header__head-line__opened">
+          <div class="page-header__head-line-wrapper">
+            <a href="#" class="logo"></a>
+            <a href="#" class="page-header__nav-button page-header__nav-button__opened"></a>
+          </div>
         </div>
-      </nav>
-    </div>
-    <h2 class="page-header__slogan">
-      Взгляните на жизнь иначе!
-    </h2>
-    <img class="page-header__pic" src="img/iphone-hand-mobile.png" width="258" height="286" alt="iphone in hand">
-  </header>
-  <main class="main">
-    <div class="app">
-      <a class="app__btn link" href="#">Скачать приложение</a>
-      <div class="app__platforms">
-        <a class="app__platform app__platform_apple" href="#">
-          <span class="icon icon_apple"></span>
-        </a>
-        <a class="app__platform app__platform_android" href="#">
-          <span class="icon icon_android"></span>
-        </a>
-        <a class="app__platform app__platform_windows" href="#">
-          <span class="icon icon_windows"></span>
-        </a>
-      </div>
-      <div class="app__description">
-        Доступно для iPhone, OS X, Windows 8
+        <div class="page-nav page-nav__opened">
+        </div>
       </div>
     </div>
-    <div class="main__title">
-      <p>Устали от серости мегаполиса?</p>
-      <p>Нам есть, что вам предложить!</p>
-    </div>
-    <div class="page-info">
-      <ul class="page-info__items">
-        <li class="page-info__item item">
-          <h4 class="page-info__item-title">Поднимает настроение</h4>
-          <p class="page-info__item-text">
-            Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-          </p>
-        </li>
-        <li class="page-info__item item">
-          <h4 class="page-info__item-title">Меняет мир вокруг</h4>
-          <p class="page-info__item-text">
-            Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-          </p>
-        </li>
-        <li class="page-info__item item">
-          <h4 class="page-info__item-title">Заводит новых друзей</h4>
-          <p class="page-info__item-text">
-            Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
-          </p>
-        </li>
-      </ul>
-      <div class="page-info__pic">
+    <div class="page-header__container">
+      <div class="page-header__slogan">
 
       </div>
-    </div>
-    <div class="reviews slider">
-      <ul class="slider__list">
-        <li class="slider__slide item slider__slide_active">
-          <h4 class="reviews__reviewer">
-            Николай Петров
-          </h4>
-          <p class="reviews__text">
-            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-          </p>
-        </li>
-        <li class="slider__slide item" >
-          <h4 class="reviews__reviewer">
-            Николай Петров
-          </h4>
-          <p class="reviews__text">
-            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-          </p>
-        </li>
-        <li class="slider__slide item" >
-          <h4 class="reviews__reviewer">
-            Николай Петров
-          </h4>
-          <p class="reviews__text">
-            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-          </p>
-        </li>
-      </ul>
-      <div class="slider__nav">
-        <a href="#" class="slider__nav-btn slider__nav-btn_active"></a>
-        <a href="#" class="slider__nav-btn"></a>
-        <a href="#" class="slider__nav-btn"></a>
+      <div class="page-header__pic">
+
+      </div>
+      <div class="app">
       </div>
     </div>
-    <div class="prices slider">
-      <ul class="slider__list">
-        <li class="slider__slide item slider__slide_active">
-            <header class="prices__header">
-              <h4 class="prices__title">Стандарт</h4>
-              <div class="prices__cost">
-                3,99 USD
-              </div>
-            </header>
-            <ul class="details">
-              <li class="details__item item">
-                <span class="details__caption">Розовый фильтр</span>
-                <span class="details__icon"></span>
-              </li>
-              <li class="details__item item">
-                <span class="details__caption">Смайлики</span>
-                <span class="details__icon"></span>
-              </li>
-              <li class="details__item item">
-                <span class="details__caption">Комментарии</span>
-                <span class="details__icon details__icon_disabled"></span>
-              </li>
-            </ul>
-        </li>
-        <li class="slider__slide item" >
-          <header class="prices__header">
-            <h4 class="prices__title">Стандарт</h4>
-            <div class="prices__cost">
-              3,99 USD
-            </div>
-          </header>
-          <ul class="details">
-            <li class="details__item item">
-              <span class="details__caption">Розовый фильтр</span>
-              <span class="details__icon"></span>
-            </li>
-            <li class="details__item item">
-              <span class="details__caption">Смайлики</span>
-              <span class="details__icon"></span>
-            </li>
-            <li class="details__item item">
-              <span class="details__caption">Комментарии</span>
-              <span class="details__icon details__icon_disabled"></span>
-            </li>
-          </ul>
-        </li>
-        <li class="slider__slide item" >
-          <header class="prices__header">
-            <h4 class="prices__title">Стандарт</h4>
-            <div class="prices__cost">
-              3,99 USD
-            </div>
-          </header>
-          <ul class="details">
-            <li class="details__item item">
-              <span class="details__caption">Розовый фильтр</span>
-              <span class="details__icon"></span>
-            </li>
-            <li class="details__item item">
-              <span class="details__caption">Смайлики</span>
-              <span class="details__icon"></span>
-            </li>
-            <li class="details__item item">
-              <span class="details__caption">Комментарии</span>
-              <span class="details__icon details__icon_disabled"></span>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <div class="slider__nav">
-        <a href="#" class="slider__nav-btn slider__nav-btn_active"></a>
-        <a href="#" class="slider__nav-btn"></a>
-        <a href="#" class="slider__nav-btn"></a>
+  </header>
+  <main class="main">
+    <div class="main__title">
+
+    </div>
+    <div class="page-info">
+      <div class="page-info__wrapper">
+        <ul class="page-info__items page-info__items_pic">
+          <li class="page-info__item page-info__item_pic">
+
+          </li>
+          <li class="page-info__item page-info__item_pic">
+
+          </li>
+          <li class="page-info__item page-info__item_pic">
+
+          </li>
+        </ul>
+        <ul class="page-info__items">
+          <li class="page-info__item">
+
+          </li>
+          <li class="page-info__item">
+
+          </li>
+          <li class="page-info__item">
+
+          </li>
+        </ul>
       </div>
+    </div>
+    <article class="research">
+      <div class="research__wrapper">
+
+      </div>
+    </article>
+    <div class="reviews">
+
+    </div>
+    <div class="prices">
+      <ul class="prices__list">
+        <li class="prices__item"></li>
+        <li class="prices__item"></li>
+        <li class="prices__item"></li>
+      </ul>
     </div>
   </main>
-  <footer class="page-footer">
-    <h2 class="page-footer__title">
-      Остались вопросы?
-      Свяжитесь с нами!
-    </h2>
-    <div class="contacts">
-      <div class="contacts__term">Звоните:</div>
-      <div class="contacts__description"><a class="link" href="tel:+7(812)555-66-66">+7 (812) 555-66-6</a></div>
-      <div class="contacts__term">Пишите:</div>
-      <div class="contacts__description"><a class="link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></div>
-      <div class="contacts__term">Приезжайте в гости:</div>
-      <div class="contacts__description">ул. Большая Конюшенная, 19/8</div>
+  <section class="contacts">
+    <div class="contacts__wrapper">
+      <div class="contacts__title">
+
+      </div>
+      <ul class="contacts__list">
+        <li class="contacts__item">
+
+        </li>
+        <li class="contacts__item">
+
+        </li>
+        <li class="contacts__item">
+
+        </li>
+      </ul>
+
     </div>
-    <div class="page-footer__map">
+  </section>
+  <footer class="page-footer">
+    <div class="page-footer__logo">
+
+    </div>
+    <div class="page-footer__social">
+
+    </div>
+    <div class="page-footer__made-in">
 
     </div>
   </footer>
-
 </body>
 </html>

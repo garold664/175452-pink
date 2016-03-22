@@ -2,133 +2,72 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Пинк. Форма</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="form-page">
   <header class="page-header">
-    <div class="page-header__head-line">
-      <a class="logo" href="#">
-        <img src="icons/logo.svg" alt="Pink" width="75" height="22">
-      </a>
-      <nav class="page-nav page-nav_closed">
-        <a href="#" class="page-nav__toggle page-nav__toggle_closed"></a>
-        <div class="page-nav__wrapper">
-          <ul class="page-nav__list">
-            <li class="page-nav__item">
-              <a class="page-nav__close-btn" href="#"></a>
-            </li>
-            <li class="page-nav__item">
-              <a class="page-nav__link link" href="index.html">Главная</a>
-            </li>
-            <li class="page-nav__item">
-              <a class="page-nav__link link" href="#">Фотографии</a>
-            </li>
-            <li class="page-nav__item">
-              <a class="page-nav__link link" href="#">Конкурс</a>
-            </li>
-            <li class="page-nav__item">
-              <a class="page-nav__link link" href="https://htmlacademy.ru/">HTML Academy</a>
-            </li>
-          </ul>
+    <div class="page-header__nav-wrapper">
+      <div class="page-header__inner">
+        <div class="page-header__head-line page-header__head-line__opened">
+          <div class="page-header__head-line-wrapper">
+            <a href="#" class="logo"></a>
+            <a href="#" class="page-header__nav-button page-header__nav-button__opened"></a>
+          </div>
         </div>
-      </nav>
+        <div class="page-nav page-nav__opened">
+        </div>
+      </div>
     </div>
-    <h2 class="page-header__slogan">
-      Конкурс на самое безбашеное путешествие с Пинк
-    </h2>
-  </header>
+    <div class="page-header__slogan page-header__slogan_form">
 
+    </div>
+  </header>
   <main class="main">
     <div class="announce">
       <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
     </div>
     <form class="form" action="/echo" method="post">
-      <div class="form__section">
-        <label class="form__text-label" for="name">Имя:</label>
-        <input class="form__text-input" type="text" name="name" id="name" placeholder="Введите ваше имя">
+      <section class="form__section form__section_name">
 
-        <label class="form__text-label" for="surname">Фамилия:</label>
-        <input class="form__text-input" type="text" name="surname" id="surname" placeholder="Укажите фамилию">
+      </section>
+      <section class="form__section form__section_attainments form__section_gray">
+        <div class="form__section-wrapper">
+          <h2 class="form__section-title">Ваши безбашенные достижения в путешествии</h2>
+        </div>
+      </section>
+      <section class="form__section form__section_contacts">
+        <div class="form__section-wrapper">
+          <h2 class="form__section-title">Контактная информация</h2>
+        </div>
+      </section>
+      <section class="form__section form__section_app form__section_gray">
+        <div class="form__section-wrapper">
+          <h2 class="form__section-title">С каким приложением путешествовали</h2>
+        </div>
+      </section>
+      <section class="form__section form__section_emotions">
+        <h2 class="form__section-title">Опишите свои эмоции</h2>
+      </section>
+      <div class="form__footer">
 
-        <label class="form__text-label" for="patronymic">Отчество:</label>
-        <input class="form__text-input" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
-      </div>
-      <div class="form__section form__section_gray">
-        <h2 class="form__section-title">Ваши безбашенные достижения в путешествии</h2>
-        <label class="form__checkbox-label" for="checkbox-1">Сделал селфи с акулой</label>
-        <input class="form__checkbox-input" type="checkbox" name="achievements" id="checkbox-1" value="checkbox-1" checked>
-
-        <label class="form__checkbox-label" for="checkbox-2">Обгорел на пляже</label>
-        <input class="form__checkbox-input" type="checkbox" name="achievements" id="checkbox-2" value="checkbox-2" checked>
-
-        <label class="form__checkbox-label" for="checkbox-3">Видел Чака Норриса</label>
-        <input class="form__checkbox-input" type="checkbox" name="achievements" id="checkbox-3" value="checkbox-3">
-
-        <label class="form__checkbox-label" for="checkbox-4">Накупил сувениров</label>
-        <input class="form__checkbox-input" type="checkbox" name="achievements" id="checkbox-4" value="checkbox-4">
-
-        <label class="form__checkbox-label" for="checkbox-5">Удержал башню</label>
-        <input class="form__checkbox-input" type="checkbox" name="achievements" id="checkbox-5" value="checkbox-5" checked>
-
-        <label class="form__checkbox-label" for="checkbox-6">Разгромил отель</label>
-        <input class="form__checkbox-input" type="checkbox" name="achievements" id="checkbox-6" value="checkbox-6">
-      </div>
-      <div class="form__section">
-        <label class="form__text-label" for="tel">Номер телефончика</label>
-        <input class="form__text-input" type="tel" name="tel" id="tel" placeholder="Номер, пожалуйста">
-
-        <label class="form__text-label" for="email">Адресок почты</label>
-        <input class="form__text-input" type="email" name="email" id="email" placeholder="Email, пожалуйста">
-      </div>
-      <div class="form__section form__section_gray">
-        <h2 class="form__section-title">С каким приложением путешествовали?</h2>
-        <label class="form__radio-label" for="ios">Pink для iOS</label>
-        <input class="form__radio-input" type="radio" name="os" id="ios" value="ios">
-
-        <label class="form__radio-label" for="android">Pink на Android</label>
-        <input class="form__radio-input" type="radio" name="os" id="android" value="android">
-
-        <label class="form__radio-label" for="windows">Windows Phone</label>
-        <input class="form__radio-input" type="radio" name="os" id="windows" value="windows">
-      </div>
-      <div class="form__section">
-        <h2 class="form__section-title">
-            Опишите свои эмоции
-        </h2>
-        <textarea class="form__textarea" name="emotions" rows="10">
-            Можно прям в красках, не стесняясь в выражениях
-        </textarea>
-        <input class="form__submit" type="submit" value="ОТПРАВИТЬ ФОРМУ">
       </div>
     </form>
   </main>
 
-  <footer class="page-footer">
+  <footer class="page-footer page-footer_form">
     <div class="page-footer__logo">
-      <a class="logo" href="#">
-        <img class="logo__img" src="icons/glasses.svg" alt="Pink glasses">
-        <img class="logo__img" src="icons/logo.svg" alt="Pink" width="75" height="22">
-      </a>
+
     </div>
-    <div class="social-links">
-      <a href="#" class="social-link link social-link_twitter">
-          <span class="icon icon_twitter"></span>
-      </a>
-      <a href="#" class="social-link link social-link_facebook">
-          <span class="icon icon_facebook"></span>
-      </a>
-      <a href="#" class="social-link link social-link_youtube">
-          <span class="icon icon_youtube"></span>
-      </a>
+    <div class="page-footer__social">
+
     </div>
     <div class="page-footer__made-in">
-      Разработано
-      <a class="page-footer__made-in-link link" href="#">
-          <img src="icons/htmlacademy.svg" alt="htmlacademy.ru">
-      </a>
+
     </div>
   </footer>
+
   <div class="form-popup">
     <h2 class="form-popup__title">Ваша заявка отправлена</h2>
     <p>
