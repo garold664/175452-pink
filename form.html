@@ -10,154 +10,81 @@
   <header class="page-header">
     <div class="page-header__nav-wrapper">
       <div class="page-header__inner">
-        <div class="page-header__head-line page-header__head-line_closed">
+        <div class="page-header__head-line page-header__head-line__opened">
           <div class="page-header__head-line-wrapper">
             <a href="#" class="logo"></a>
-            <a href="#" class="page-header__nav-button page-header__nav-button_closed"></a>
+            <a href="#" class="page-header__nav-button page-header__nav-button__opened"></a>
           </div>
         </div>
-        <ul class="page-nav page-nav_closed">
-          <li class="page-nav__item">
-            <a class="page-nav__link link" href="index.html">Главная</a>
-          </li>
-          <li class="page-nav__item">
-            <a class="page-nav__link link" href="photo.html">Фотографии</a>
-          </li>
-          <li class="page-nav__item page-nav__item_active">
-            <a class="page-nav__link link">Конкурс</a>
-          </li>
-          <li class="page-nav__item">
-            <a class="page-nav__link link" href="https://htmlacademy.ru/">HTML Academy</a>
-          </li>
-        </ul>
+        <div class="page-nav page-nav__opened">
+        </div>
       </div>
     </div>
-    <div class="page-header__slogan page-header__slogan">
-      <div class="page-header__slogan-wrapper">
-        Конкурс на самое безбашенное путешествие с Пинк
-      </div>
+    <div class="page-header__slogan page-header__slogan_form">
+
     </div>
   </header>
   <main class="main">
     <div class="announce">
-      <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span class="announce__hidden">Пожалуйста, заполните форму ниже:</span></p>
+      <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
     </div>
     <form class="form" action="/echo" method="post">
       <section class="form__section form__section_name">
-        <div class="form__inputs-group">
-          <label class="form__text-label" for="name">Имя:</label>
-          <input class="form__text-input" type="text" name="name" id="name" value="Введите ваше имя">
-        </div>
-        <div class="form__inputs-group">
-          <label class="form__text-label" for="surname">Фамилия:</label>
-          <input class="form__text-input" type="text" name="surname" id="surname" value="Укажите фамилию">
-        </div>
-        <div class="form__inputs-group">
-          <label class="form__text-label" for="patronymic">Отчество:</label>
-          <input class="form__text-input" type="text" name="patronymic" id="patronymic" value="Ну и отчество тоже">
-        </div>
+
       </section>
       <section class="form__section form__section_attainments form__section_gray">
         <div class="form__section-wrapper">
-          <h2 class="form__section-title"><span>Ваши безбашенные достижения в путешествии</span></h2>
-          <div class="form__inputs-group">
-            <input class="form__checkbox-input" type="checkbox" name="achievements" id="checkbox-1" value="checkbox-1" checked>
-            <label class="form__checkbox-label" for="checkbox-1">Сделал селфи с акулой</label>
-
-            <input class="form__checkbox-input" type="checkbox" name="achievements" id="checkbox-2" value="checkbox-2" checked>
-            <label class="form__checkbox-label" for="checkbox-2">Обгорел на пляже</label>
-
-            <input class="form__checkbox-input" type="checkbox" name="achievements" id="checkbox-3" value="checkbox-3">
-            <label class="form__checkbox-label" for="checkbox-3">Видел Чака Норриса</label>
-
-            <input class="form__checkbox-input" type="checkbox" name="achievements" id="checkbox-4" value="checkbox-4">
-            <label class="form__checkbox-label" for="checkbox-4">Накупил сувениров</label>
-
-            <input class="form__checkbox-input" type="checkbox" name="achievements" id="checkbox-5" value="checkbox-5" checked>
-            <label class="form__checkbox-label" for="checkbox-5">Удержал башню</label>
-
-            <input class="form__checkbox-input" type="checkbox" name="achievements" id="checkbox-6" value="checkbox-6">
-            <label class="form__checkbox-label" for="checkbox-6">Разгромил отель</label>
-          </div>
+          <h2 class="form__section-title">Ваши безбашенные достижения в путешествии</h2>
         </div>
       </section>
       <section class="form__section form__section_contacts">
         <div class="form__section-wrapper">
-          <h2 class="form__section-title form__section-title_mobile-hidden"><span>Контактная информация</span></h2>
-          <div class="form__inputs-group form__inputs-group_contacts">
-            <label class="form__text-label" for="tel">Номерок телефончика</label>
-            <input class="form__text-input form__text-input_contacts" type="tel" name="tel" id="tel" value="Номер, пожалуйста">
-          </div>
-          <div class="form__inputs-group form__inputs-group_contacts">
-            <label class="form__text-label" for="email">Адресок почты</label>
-            <input class="form__text-input form__text-input_contacts" type="email" name="email" id="email" value="Email, пожалуйста">
-          </div>
+          <h2 class="form__section-title">Контактная информация</h2>
         </div>
       </section>
       <section class="form__section form__section_app form__section_gray">
         <div class="form__section-wrapper">
-          <h2 class="form__section-title"><span>С каким приложением путешествовали</span></h2>
-          <input class="form__checkbox-input" type="radio" name="os" id="ios" value="ios" checked>
-          <label class="form__checkbox-label form__checkbox-label_radio" for="ios">Pink для iOS</label>
-
-          <input class="form__checkbox-input" type="radio" name="os" id="android" value="android">
-          <label class="form__checkbox-label form__checkbox-label_radio" for="android">Pink на Android</label>
-
-          <input class="form__checkbox-input" type="radio" name="os" id="windows" value="windows">
-          <label class="form__checkbox-label form__checkbox-label_radio" for="windows">Windows Phone</label>
+          <h2 class="form__section-title">С каким приложением путешествовали</h2>
         </div>
       </section>
       <section class="form__section form__section_emotions">
-        <div class="form__section-wrapper">
-          <h2 class="form__section-title form__section-title_emotions"><span>Опишите свои эмоции</span></h2>
-          <textarea class="form__textarea" name="emotions" rows="5">Можно прям в красках, не стесняясь в выражениях</textarea>
-        </div>
+        <h2 class="form__section-title">Опишите свои эмоции</h2>
       </section>
       <div class="form__footer">
-        <button class="form__btn" type="submit">Отправить форму</button>
-        <p class="form__note"><i>*</i> &mdash;  обязательные <span class="form__mobile-hidden">для заполнения</span> поля</p>
-      </div>
-      <div class="form__popup form__popup_success">
-        <h2 class="form__popup-title">Ваша заявка отправлена</h2>
-        <p>
-          Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.
-        </p>
-        <div class="form__btn-wrapper">
-          <a href="#" class="btn form__btn link">Закрыть окно</a>
-        </div>
-      </div>
-      <div class="form__popup form__popup_failure">
-        <h2 class="form__popup-title">Что-то пошло не так!</h2>
-        <p>
-          Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить.
-        </p>
-        <div class="form__btn-wrapper form__btn-wrapper_gray">
-          <a href="#" class="btn form__btn link">Ок</a>
-        </div>
+
       </div>
     </form>
   </main>
 
   <footer class="page-footer page-footer_form">
     <div class="page-footer__logo">
-      <a class="logo" href="#">
-        <img src="img/logo-pink-blue-mobile.svg" alt="Pink">
-      </a>
+
     </div>
     <div class="page-footer__social">
-      <a href="#" class="social-link social-link_tw">Twitter</a>
-      <a href="#" class="social-link social-link_fb">Facebook</a>
-      <a href="#" class="social-link social-link_yt">Youtube</a>
+
     </div>
     <div class="page-footer__made-in">
-      Разработано
-      <a class="page-footer__made-in-link link" href="#">
-          <img src="img/logo-htmlacademy.svg" alt="HTML Academy" width="27" height="34\">
-      </a>
+
     </div>
   </footer>
 
-  <script src="js/common.js"></script>
-
+  <div class="form-popup">
+    <h2 class="form-popup__title">Ваша заявка отправлена</h2>
+    <p>
+      Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.
+    </p>
+    <div class="form-popup__btn-wrapper">
+      <a href="#" class="btn form-popup__btn link">Закрыть окно</a>
+    </div>
+  </div>
+  <div class="form-popup">
+    <h2 class="form-popup__title">Что-то пошло не так!</h2>
+    <p>
+      Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить.
+    </p>
+    <div class="form-popup__btn-wrapper form-popup__btn-wrapper_gray">
+      <a href="#" class="btn form-popup__btn link">Ок</a>
+    </div>
+  </div>
 </body>
 </html>

@@ -1,34 +1,30 @@
 .page-footer {
+  .outline(#0d0,'.page-footer');
   .container;
+  min-height: 230px;
   display: none;
-  padding: 25px 0 45px;
   &_form, &_photo {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
   }
-  & .logo {
-    display: inline-block;
-    width: auto;
-    height: auto;
+  > div {
+    min-height: 50px;
+    width: 200px;
+  }
+  &__logo {
+    .outline(#d0c,'.page-footer__logo');
   }
   &__social {
-    margin-top: 30px;
+    .outline(#d0c,'.page-social');
   }
   &__made-in {
-    display: inline-block;
-    margin-top: 40px;
-    font-size: 14px;
-    line-height: 18px;
-    color: @dark-blue;
+    .outline(#d0c,'.page-footer__made-in');
   }
   &__made-in-link {
-    margin-left: 12px;
-    vertical-align: middle;
-  }
-  &__made-in-link img {
-    vertical-align: middle;
+
   }
 }
 
@@ -37,26 +33,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
-    padding: 25px 0 38px;
-    &__made-in {
-      padding-left: 20px;
-    }
+    align-items: center;
+    min-height: 125px;
   }
 }
 @media @desktop-widths {
   .page-footer {
-    padding: 15px 0 70px;
-    &__social {
-      margin-top: 0;
-      margin-left: 10px;
-    }
-    &__made-in {
-      padding-left: 0;
-      font-size: 18px;
-    }
-    &__made-in-link {
-      margin-left: 10px;
-    }
+    min-height: 193px;
   }
 }

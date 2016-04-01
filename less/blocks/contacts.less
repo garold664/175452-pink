@@ -1,95 +1,60 @@
 .contacts {
-  line-height: 30px;
-  text-align: center;
-  font-weight: 300;
+  .outline(#00c, '.contacts');
+  min-height: 612px;
   .contacts__wrapper {
+    .outline(#f00,'.contacts__wrapper');
     .container;
+    min-height: 445px;
   }
   &__title {
-    padding: 40px 0 7px;
-    font-size: 24px;
-    color: @dark-blue;
+    .outline(#330,'.contacts__title',-40);
+    min-height: 120px;
   }
   &__list {
-    padding-top: 5px;
+    .outline(#330,'.contacts__title',-40);
   }
   &__item {
-    padding-top: 16px;
+    .outline(#0f0,'.contacts__item');
+    min-height: 100px;
   }
   &__term {
-    font-size: 18px;
-    font-weight: 700;
+
   }
   &__description {
-    font-size: 24px;
     color: #d22856;
-  }
-  &__description a {
-    color: #d22856;
-  }
-  &__description_mail a:hover {
-    text-decoration: underline;
-    color: @dark-blue;
-  }
-  &__description_mail a:active {
-    text-decoration: none;
-    color: #ced0d2;
-  }
-  &__map {
-    min-height: 252px;
-    background-image: url(../img/bg-triangle-white-footer.svg), url(../img/bg-map.png);
-    background-repeat: no-repeat;
-    background-position: center 0, center center;
-    background-size: 100% auto, auto;
+    a {
+      color: #d22856;
+    }
   }
 }
 
 @media @tablet-widths {
   .contacts {
+    min-height: 780px;
     &__title {
-      padding: 50px 50px 7px;
-      font-size: 40px;
-      line-height: 45px;
+      min-height: 155px;
     }
     &__list {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
       align-content: space-around;
+      min-height: 245px;
     }
     &__item {
-      width: 230px;
-      padding-top: 34px;
-      padding-bottom: 12px;
-    }
-    &__map {
-      height: 388px;
+      width: 250px;
     }
   }
 }
 
 @media @desktop-widths {
   .contacts {
-    margin-bottom: 32px;
+    min-height: 868px;
     &__title {
-      padding: 60px 120px 30px;
-      font-size: 50px;
-      line-height: 60px;
+      min-height: 200px;
     }
     &__list {
-    }
-    &__item {
-      padding-top: 13px;
-      padding-bottom: 0;
-    }
-    &__item:nth-child(2) {
-      order: 1;
-    }
-    &__description {
-      margin-top: 20px;
-    }
-    &__map {
-      height: 525px;
+      min-height: 160px;
     }
   }
 }
