@@ -10,70 +10,147 @@
   <header class="page-header">
     <div class="page-header__nav-wrapper">
       <div class="page-header__inner">
-        <div class="page-header__head-line page-header__head-line__opened">
+        <div class="page-header__head-line page-header__head-line__closed">
           <div class="page-header__head-line-wrapper">
             <a href="#" class="logo"></a>
-            <a href="#" class="page-header__nav-button page-header__nav-button__opened"></a>
+            <a href="#" class="page-header__nav-button page-header__nav-button__closed"></a>
           </div>
         </div>
-        <div class="page-nav page-nav__opened">
+        <div class="page-nav page-nav__closed">
+          <li class="page-nav__item item">
+            <a class="page-nav__link link" href="index.html">Главная</a>
+          </li>
+          <li class="page-nav__item page-nav__item_active item">
+            <a class="page-nav__link link">Фотографии</a>
+          </li>
+          <li class="page-nav__item item">
+            <a class="page-nav__link link" href="form.html">Конкурс</a>
+          </li>
+          <li class="page-nav__item item">
+            <a class="page-nav__link link" href="https://htmlacademy.ru/">HTML Academy</a>
+          </li>
         </div>
       </div>
     </div>
-    <div class="page-header__slogan page-header__slogan_photo">
-      Фотографии пользователей
+    <div class="page-header__slogan">
+      <div class="page-header__slogan-wrapper">
+        Фотографии пользователей
+      </div>
     </div>
   </header>
 
   <main class="main main_photo">
     <div class="announce">
-      <p>Взгляните на фотографии, которые выкладывают пользователи!</p>
-      <p>Видите, как не хватает ваших?</p>
+      <p>Взгляните на фотографии, которые выкладывают пользователи!
+      Видите, как не хватает ваших?</p>
     </div>
     <article class="post post_panorama">
-      <div class="post__img-panorama"></div>
+      <img class="post__img-panorama" src="img/panorama-mobile.jpg" alt="Панорама дня" width="322" height="137">
       <div class="post__wrapper">
         <div class="post__content">
-
+            <div class="post__header">
+              <h3 class="post__author">Анна</h3>
+              <span class="post__time">(5 минут назад)</span>
+            </div>
+            <p class="post__text">
+                Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!
+            </p>
+            <footer class="post__footer">
+              Нравится: <span class="likes-counter">215</span>
+            </footer>
         </div>
       </div>
     </article>
 
      <div class="photos">
       <article class="post">
-          <div class="post__img"></div>
+          <img class="post__img" src="img/photo-1-mobile.jpg" width="280" height="180">
           <div class="post__content">
-
+            <div class="post__header">
+              <h3 class="post__author">Левон</h3>
+              <span class="post__time">(5 часов назад)</span>
+            </div>
+            <div class="post__text">
+              <p>Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            </div>
+            <footer class="post__footer">
+              Нравится: <span class="likes-counter">356</span>
+            </footer>
           </div>
       </article>
       <article class="post">
-          <div class="post__img"></div>
+          <img class="post__img" src="img/photo-2-mobile.jpg" width="280" height="180">
           <div class="post__content">
-
+            <header class="post__header">
+              <h3 class="post__author">Антон</h3>
+              <span class="post__time">(12 часов назад)</span>
+            </header>
+            <div class="post__text">
+              <p>Соседи будут рады!</p>
+            </div>
+            <footer class="post__footer">
+              <span class="icon icon_likes"></span> Нравится: <span class="likes-counter">666</span>
+            </footer>
           </div>
       </article>
       <article class="post">
-          <div class="post__img"></div>
+          <img class="post__img" src="img/photo-3-mobile.jpg" width="280" height="180">
           <div class="post__content">
-
+            <header class="post__header">
+              <h3 class="post__author">Борис</h3>
+              <span class="post__time">(20 часов назад)</span>
+            </header>
+            <div class="post__text">
+              <p>Здесь могла быть ваша цитата о высоком и вечном.</p>
+            </div>
+            <footer class="post__footer">
+              <span class="icon icon_likes"></span> Нравится: <span class="likes-counter">215</span>
+            </footer>
           </div>
       </article>
       <article class="post">
-          <div class="post__img"></div>
+          <img class="post__img" src="img/photo-4-mobile.jpg" width="280" height="180">
           <div class="post__content">
-
+            <header class="post__header">
+              <h3 class="post__author">Сергей</h3>
+              <span class="post__time">(25 часов назад)</span>
+            </header>
+            <div class="post__text">
+              <p>Самая кубанская в мире!</p>
+            </div>
+            <footer class="post__footer">
+              <span class="icon icon_likes"></span> Нравится: <span class="likes-counter">4</span>
+            </footer>
           </div>
       </article>
       <article class="post">
-          <div class="post__img"></div>
+          <img class="post__img" src="img/photo-5-mobile.jpg" width="280" height="180">
           <div class="post__content">
-
+            <header class="post__header">
+              <h3 class="post__author">Максим</h3>
+              <span class="post__time">(40 часов назад)</span>
+            </header>
+            <div class="post__text">
+              <p>Где снег-то?</p>
+            </div>
+            <footer class="post__footer">
+              <span class="icon icon_likes"></span> Нравится: <span class="likes-counter">150</span>
+            </footer>
           </div>
       </article>
       <article class="post">
-          <div class="post__img"></div>
+          <img class="post__img" src="img/photo-6-mobile.jpg" width="280" height="180">
           <div class="post__content">
-
+            <header class="post__header">
+              <h3 class="post__author">Надежда</h3>
+              <span class="post__time">(45 часов назад)</span>
+            </header>
+            <div class="post__text">
+              <p>Всем GM и взаимныые лайки!</p>
+            </div>
+            <footer class="post__footer">
+              <span class="icon icon_likes"></span> Нравится: <span class="likes-counter">2560</span>
+            </footer>
           </div>
       </article>
     </div>
@@ -85,11 +162,35 @@
 
     <div class="add-photo">
       <div class="add-photo__wrapper">
-        <div class="add-photo__img">
-
-        </div>
+        <img class="add-photo__img" src="img/photo-7-mobile.jpg" width="280" height="374">
         <div class="add-photo__tools">
-
+          <input class="add-photo__tool-chooser" type="radio"  id="tool-chooser-1" name="tool-chooser" checked="checked">
+          <input class="add-photo__tool-chooser" type="radio"  id="tool-chooser-2" name="tool-chooser">
+          <input class="add-photo__tool-chooser" type="radio"  id="tool-chooser-3" name="tool-chooser">
+          <div class="add-photo__tools-row">
+            <label class="add-photo__tool-btn add-photo__tool-btn_crop" for="tool-chooser-1" >Кадрирование</label>
+            <label class="add-photo__tool-btn add-photo__tool-btn_fill" for="tool-chooser-2" >Заливка</label>
+            <label class="add-photo__tool-btn add-photo__tool-btn_contrast" for="tool-chooser-3" >Контраст</label>
+          </div>
+          <div class="add-photo__range add-photo__range_crop">
+            <div class="add-photo__range-line">
+              <div class="add-photo__range-btn"></div>
+            </div>
+          </div>
+          <div class="add-photo__range add-photo__range_fill">
+            <div class="add-photo__range-line">
+              <div class="add-photo__range-btn"></div>
+            </div>
+          </div>
+          <div class="add-photo__range add-photo__range_contrast">
+            <div class="add-photo__range-line">
+              <div class="add-photo__range-btn"></div>
+            </div>
+          </div>
+          <div class="add-photo__btns">
+            <a href="#" class="add-photo__btn add-photo__btn_send">Запостить</a>
+            <a href="#" class="add-photo__btn add-photo__btn_reset">Отмена</a>
+          </div>
         </div>
       </div>
     </div>
@@ -98,26 +199,23 @@
   <footer class="page-footer page-footer_photo">
     <div class="page-footer__logo">
       <a class="logo" href="#">
-        <img src="img/logo-pink-blue-mobile.svg" alt="Pink glasses">
+        <img src="img/logo-pink-blue-mobile.svg" alt="Pink">
       </a>
     </div>
     <div class="page-footer__social">
-      <a href="#" class="social-link link social-link_twitter">
-        <span class="icon icon_twitter"></span>
-      </a>
-      <a href="#" class="social-link link social-link_facebook">
-        <span class="icon icon_facebook"></span>
-      </a>
-      <a href="#" class="social-link link social-link_youtube">
-        <span class="icon icon_youtube"></span>
-      </a>
+      <a href="#" class="social-link social-link_tw">Twitter</a>
+      <a href="#" class="social-link social-link_fb">Facebook</a>
+      <a href="#" class="social-link social-link_yt">Youtube</a>
     </div>
     <div class="page-footer__made-in">
       Разработано
       <a class="page-footer__made-in-link link" href="#">
-        <img src="img/htmlacademy.svg" alt="htmlacademy.ru" width="27" height="34">
+        <img src="img/logo-htmlacademy.svg" alt="htmlacademy.ru" width="27" height="34">
       </a>
     </div>
   </footer>
+
+  <script src="js/common.js"></script>
+
 </body>
 </html>
