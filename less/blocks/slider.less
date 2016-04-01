@@ -1,4 +1,5 @@
 .slider {
+  position: relative;
   &__list {
 
   }
@@ -8,11 +9,131 @@
     }
   }
   &__nav {
-
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translate(-50%);
+  }
+  &__nav-radio {
+    display: none;
+  }
+  #prices-radio_1:checked ~ &__nav > label[for="prices-radio_1"]:after,
+  #prices-radio_2:checked ~ &__nav > label[for="prices-radio_2"]:after,
+  #prices-radio_3:checked ~ &__nav > label[for="prices-radio_3"]:after {
+    border-color: @dark-blue;
+    background-color: #fff;
+  }
+  #reviews-radio_1:checked ~ &__nav > label[for="reviews-radio_1"]:after,
+  #reviews-radio_2:checked ~ &__nav > label[for="reviews-radio_2"]:after,
+  #reviews-radio_3:checked ~ &__nav > label[for="reviews-radio_3"]:after {
+    border-color: @dark-blue;
+    background-color: #fff;
+  }
+  #prices-radio_1:checked ~ .prices__list {
+    margin-left: 22px;
+  }
+  #prices-radio_2:checked ~ .prices__list {
+    margin-left: -256px;
+  }
+  #prices-radio_3:checked ~ .prices__list {
+    margin-left: -534px;
+  }
+  #reviews-radio_1:checked ~ .reviews__list .reviews__slide:nth-child(1) {
+    display: flex;
+  }
+  #reviews-radio_2:checked ~ .reviews__list .reviews__slide:nth-child(2) {
+    display: flex;
+  }
+  #reviews-radio_3:checked ~ .reviews__list .reviews__slide:nth-child(3) {
+    display: flex;
   }
   &__nav-btn {
-    &_active {
+    margin: 0 5px;
+    font-size: 0;
+    cursor: pointer;
+  }
+  &__nav-btn::after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    background-color: #b5b9be;
+    background-clip: content-box;
+  }
+  &__nav-btn:hover::after {
+      background-color: #7e868f;
+  }
+  &__nav-btn:active::after {
+      background-color: #e9ebec;
+  }
+  &__arrow {
+    display: none;
+    font-size: 0;
+  }
+}
 
+@media @tablet-widths {
+  .slider {
+    &__nav {
+      bottom: 5px;
+    }
+    .prices &__nav {
+      display: none;
+    }
+    #prices-radio_1:checked ~ .prices__list {
+      margin-left: 0;
+    }
+    #prices-radio_2:checked ~ .prices__list {
+      margin-left: 0;
+    }
+    #prices-radio_3:checked ~ .prices__list {
+      margin-left: 0;
+    }
+  }
+}
+
+
+@media @desktop-widths {
+  .slider {
+    &__nav {
+      display: none;
+    }
+    &__arrow {
+      display: inline-block;
+      position: absolute;
+    }
+    &__arrow_next {
+      top: 50%;
+      right: 5px;
+      transform: translateY(-50%);
+    }
+    &__arrow_prev {
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%);
+    }
+    &__arrow::after {
+      content: "";
+      display: block;
+      width: 26px;
+      height: 26px;
+      border: 2px solid #bec2c7;
+      border-top-style: none;
+      border-left-style: none;
+    }
+    &__arrow_next::after {
+      transform: rotate(-45deg);
+    }
+    &__arrow_prev::after {
+      transform: rotate(135deg);
+    }
+    &__arrow:hover::after {
+      border-color: #7e868f;
+    }
+    &__arrow:active::after {
+      opacity: 0.3;
     }
   }
 }

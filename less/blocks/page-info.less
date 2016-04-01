@@ -1,39 +1,44 @@
 .page-info {
-    .outline(#330,'page-info', 30);
+  background-color: #f2f2f2;
+  background-image: url(../img/bg-triangle-white.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
   &__wrapper {
     .container;
-    padding-top: 88px;
+    padding-top: 75px;
     display: flex;
     flex-direction: column;
   }
   &__items {
-    .outline(#f70,'page-info__items');
     display: flex;
     flex-direction: column;
-    &_pic {
-      order: 5;
-      align-items: center;
-    }
+    margin-bottom: 15px;
+  }
+  &__items_pic {
+    order: 5;
+    align-items: center;
+    margin-bottom: 0;
   }
   &__item {
-    .outline(#333,'page-info__item', -60);
-    min-height: 100px;
-    margin-bottom: 40px;
-    &_pic {
-      .outline(#111,'page-info__item_pic');
-      width: 158px;
-      height: 280px;
-      margin: 0;
-    }
-    &_pic:nth-child(-n+2) {
-      display: none;
-    }
+    margin-bottom: 25px;
+    line-height: 24px;
+    text-align: center;
+  }
+  &__item_pic {
+    width: 158px;
+    height: 280px;
+    margin: 0;
+    overflow: hidden;
+  }
+  &__item_pic:nth-child(-n+2) {
+    display: none;
   }
   &__item-title {
-
+    margin: 8px 0 10px;
+    font-size: 18px;
   }
   &__item-text {
-
+    font-size: 14px;
   }
 }
 
@@ -45,7 +50,7 @@
     }
     &__items {
       flex-grow: 1;
-      margin-top: 70px;
+      margin-top: 65px;
       &_pic {
 
         order: 0;
@@ -55,6 +60,8 @@
       }
     }
     &__item {
+      text-align: left;
+      margin-bottom: 28px;
       &:last-child {
         margin-bottom: 0;
       }
@@ -75,24 +82,48 @@
     &__items {
       flex-direction: row;
       justify-content: space-between;
-      margin-top: 60px;
+      margin-top: 50px;
       &_pic {
         width: 830px;
         margin: auto;
       }
     }
     &__item {
-      flex-grow: 1;
-      min-height: 210px;
+      width: 300px;
       margin-bottom: 0;
-      &_pic {
-        flex-grow: 0;
-        width: 187px;
-        height: 300px;
-      }
-      &_pic:nth-child(-n+2) {
-        display: block;
-      }
+      text-align: center;
+      line-height: 30px;
+    }
+    &__item_pic {
+      position: relative;
+      flex-grow: 0;
+      width: 187px;
+      height: 300px;
+      overflow: visible;
+    }
+    &__item_pic:nth-child(-n+2) {
+      display: block;
+    }
+    &__item_pic::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -28%;
+      width: 294px;
+      height: 17px;
+      background-image: url(../img/pic-shadow.png);
+    }
+    &__item-title {
+      margin-bottom: 23px;
+      padding: 0 30px;
+      font-size: 30px;
+    }
+    &__item-text {
+      padding: 0 26px;
+      font-size: 18px;
+    }
+    &__item:nth-child(2) &__item-text {
+      padding: 0 30px;
     }
   }
 }
