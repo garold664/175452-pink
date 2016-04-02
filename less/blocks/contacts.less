@@ -36,11 +36,23 @@
     color: #ced0d2;
   }
   &__map {
-    min-height: 252px;
-    background-image: url(../img/bg-triangle-white-footer.svg), url(../img/bg-map.png);
+    position: relative;
+    height: 252px;
+    background-image: url(../img/bg-triangle-white-footer.svg);
     background-repeat: no-repeat;
-    background-position: center 0, center center;
-    background-size: 100% auto, auto;
+    background-position: center center;
+    background-size: auto;
+  }
+  &__map::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 80px;
+    background-image: url(../img/bg-triangle-white-footer.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 
@@ -64,6 +76,9 @@
     }
     &__map {
       height: 388px;
+    }
+    &__map::after {
+      height: 100px;
     }
   }
 }
@@ -90,6 +105,9 @@
     }
     &__map {
       height: 525px;
+    }
+    &__map::after {
+      height: 150px;
     }
   }
 }

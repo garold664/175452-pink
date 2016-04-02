@@ -35,18 +35,14 @@
     display: block;
   }
   &__content {
+    display: flex;
+    flex-direction: column;
     position: relative;
     padding: 17px 18px 20px;
     background: #f2f2f2;
   }
   &__content p {
     margin-bottom: 10px;
-  }
-  &__panorama-title {
-    /*
-    background-color: #d22856;
-    color: #fff;
-    */
   }
   &__header {
 
@@ -101,32 +97,38 @@
       height: 512px;
     }
     &__content {
+      justify-content: space-between;
       height: 155px;
       padding-top: 24px;
       padding-left: 28px;
     }
     &_panorama &__content {
+      flex-direction: row;
+      flex-wrap: wrap;
       height: auto;
       padding-top: 20px;
       margin-bottom: 24px;
     }
+    &__text {
+      flex-grow: 1;
+    }
     &__footer {
-      position: absolute;
-      left: 25px;
-      right: 30px;
-      bottom: 20px;
+      position: relative;
       padding: 0;
     }
     &__footer::after {
       left: auto;
-      right: 0;
+      right: 14px;
     }
     &_panorama &__footer {
-      left: auto;
-      right: 28px;
-      top: 20px;
-      bottom: auto;
-      padding-right: 30px;
+      order: -1;
+      padding-right: 40px;
+    }
+    &_panorama &__footer::after {
+      right: 10px;
+    }
+    &_panorama &__header {
+      order: -2;
     }
   }
 }
