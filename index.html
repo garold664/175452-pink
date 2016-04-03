@@ -12,7 +12,13 @@
       <div class="page-header__inner">
         <div class="page-header__head-line page-header__head-line_closed">
           <div class="page-header__head-line-wrapper">
-            <a class="logo" href="#"></a>
+            <a class="logo" href="#">
+              <picture>
+                <source media="(min-width:940px)" srcset="img/logo-pink-white-desktop.svg">
+                <source media="(min-width:620px)" srcset="img/logo-pink-white-tablet.svg">
+                <img src="img/logo-pink-white-mobile.svg">
+              </picture>
+            </a>
             <a href="#" class="page-header__nav-button page-header__nav-button_closed"></a>
           </div>
         </div>
@@ -36,7 +42,11 @@
       <div class="page-header__slogan">
         Взгляните на жизнь иначе!
       </div>
-      <img class="page-header__pic" src="img/iphone-hand-mobile.png" alt="" width="258" height="286">
+      <picture class="page-header__pic">
+        <source media="(min-width:940px)" srcset="img/iphone-hand-desktop.png">
+        <source media="(min-width:620px)" srcset="img/iphone-hand-tablet.png">
+        <img src="img/iphone-hand-mobile.png">
+      </picture>
       <div class="app">
         <div class="app__wrapper">
           <a class="app__btn link" href="#">Скачать приложение</a>
@@ -67,13 +77,25 @@
       <div class="page-info__wrapper">
         <ul class="page-info__items page-info__items_pic">
           <li class="page-info__item page-info__item_pic">
-            <img src="img/iphone-screen-mobile.png" alt="iphone-screen">
+            <picture>
+              <source media="(min-width: 940px)" srcset="img/iphone-screen_1-desktop.png">
+              <source media="(min-width: 620px)" srcset="img/iphone-screen-tablet.png">
+              <img src="img/iphone-screen-mobile.png" alt="iphone-screen">
+            </picture>
           </li>
           <li class="page-info__item page-info__item_pic">
-            <img src="img/iphone-screen-mobile.png" alt="iphone-screen">
+            <picture>
+              <source media="(min-width: 940px)" srcset="img/iphone-screen_2-desktop.png">
+              <source media="(min-width: 620px)" srcset="img/iphone-screen-tablet.png">
+              <img src="img/iphone-screen-mobile.png" alt="iphone-screen">
+            </picture>
           </li>
           <li class="page-info__item page-info__item_pic">
-            <img src="img/iphone-screen-mobile.png" alt="iphone-screen">
+            <picture>
+              <source media="(min-width: 940px)" srcset="img/iphone-screen-desktop.png">
+              <source media="(min-width: 620px)" srcset="img/iphone-screen-tablet.png">
+              <img src="img/iphone-screen-mobile.png" alt="iphone-screen">
+            </picture>
           </li>
         </ul>
         <ul class="page-info__items">
@@ -264,7 +286,10 @@
   <footer class="page-footer">
     <div class="page-footer__logo">
       <a class="logo" href="#">
-        <img src="img/logo-pink-blue-mobile.svg" alt="Pink">
+        <picture>
+          <source media="(min-width:940px)" srcset="img/logo-pink-blue-desktop.svg">
+          <img src="img/logo-pink-blue-mobile.svg">
+        </picture>
       </a>
     </div>
     <div class="page-footer__social">
@@ -283,14 +308,23 @@
   <script src="js/common.js"></script>
   <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"> </script>
   <script>
-    var map;
+    ymaps.ready(init);
+        var myMap,
+            myPlacemark;
 
-    ymaps.ready(function(){
-      map = new ymaps.Map("map", {
-        center: [59.93635983878619,30.320984359783754],
-        zoom: 18
-      });
-    });
+        function init(){
+            myMap = new ymaps.Map ("map", {
+                center: [59.93635983878619,30.320984359783754],
+                zoom: 18
+            });
+
+            myPlacemark = new ymaps.Placemark([59.93635983878619,30.320984359783754],{}, {
+                iconImageHref: "https://www.dropbox.com/s/4hyeft74iamtjwu/icon-map-marker.svg?raw=1",
+                iconImageSize: [35, 35]
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
   </script>
 </body>
 </html>

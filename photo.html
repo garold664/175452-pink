@@ -10,13 +10,13 @@
   <header class="page-header">
     <div class="page-header__nav-wrapper">
       <div class="page-header__inner">
-        <div class="page-header__head-line page-header__head-line__closed">
+        <div class="page-header__head-line page-header__head-line_closed">
           <div class="page-header__head-line-wrapper">
             <a href="#" class="logo"></a>
-            <a href="#" class="page-header__nav-button page-header__nav-button__closed"></a>
+            <a href="#" class="page-header__nav-button page-header__nav-button_closed"></a>
           </div>
         </div>
-        <div class="page-nav page-nav__closed">
+        <div class="page-nav page-nav_closed">
           <li class="page-nav__item item">
             <a class="page-nav__link link" href="index.html">Главная</a>
           </li>
@@ -45,7 +45,11 @@
       Видите, как не хватает ваших?</p>
     </div>
     <article class="post post_panorama">
-      <img class="post__img-panorama" src="img/panorama-mobile.jpg" alt="Панорама дня" width="322" height="137">
+      <picture>
+        <source media="(min-width: 940px)" srcset="img/panorama-desktop.jpg">
+        <source media="(min-width: 620px)" srcset="img/panorama-tablet.jpg">
+        <img class="post__img-panorama" src="img/panorama-mobile.jpg" alt="Панорама дня" width="322" height="137">
+      </picture>
       <div class="post__wrapper">
         <div class="post__content">
             <div class="post__header">
@@ -64,94 +68,118 @@
 
      <div class="photos">
       <article class="post">
-          <img class="post__img" src="img/photo-1-mobile.jpg" width="280" height="180">
-          <div class="post__content">
-            <div class="post__header">
-              <h3 class="post__author">Левон</h3>
-              <span class="post__time">(5 часов назад)</span>
-            </div>
-            <div class="post__text">
-              <p>Вчера он на луну летал, сегодня в руки к нам попал.</p>
-            </div>
-            <footer class="post__footer">
-              Нравится: <span class="likes-counter">356</span>
-            </footer>
+        <picture>
+          <source media="(min-width: 940px)" srcset="img/photo-1-desktop.jpg">
+          <source media="(min-width: 620px)" srcset="img/photo-1-tablet.jpg">
+          <img class="post__img" src="img/photo-1-mobile.jpg" alt="Панорама дня" width="322" height="137">
+        </picture>
+        <div class="post__content">
+          <div class="post__header">
+            <h3 class="post__author">Левон</h3>
+            <span class="post__time">(5 часов назад)</span>
           </div>
+          <div class="post__text">
+            <p>Вчера он на луну летал, сегодня в руки к нам попал.</p>
+          </div>
+          <footer class="post__footer">
+            Нравится: <span class="likes-counter">356</span>
+          </footer>
+        </div>
       </article>
       <article class="post">
-          <img class="post__img" src="img/photo-2-mobile.jpg" width="280" height="180">
-          <div class="post__content">
-            <header class="post__header">
-              <h3 class="post__author">Антон</h3>
-              <span class="post__time">(12 часов назад)</span>
-            </header>
-            <div class="post__text">
-              <p>Соседи будут рады!</p>
-            </div>
-            <footer class="post__footer">
-              <span class="icon icon_likes"></span> Нравится: <span class="likes-counter">666</span>
-            </footer>
+        <picture>
+          <source media="(min-width: 940px)" srcset="img/photo-2-desktop.jpg">
+          <source media="(min-width: 620px)" srcset="img/photo-2-tablet.jpg">
+          <img class="post__img" src="img/photo-2-mobile.jpg" alt="Панорама дня" width="322" height="137">
+        </picture>
+        <div class="post__content">
+          <header class="post__header">
+            <h3 class="post__author">Антон</h3>
+            <span class="post__time">(12 часов назад)</span>
+          </header>
+          <div class="post__text">
+            <p>Соседи будут рады!</p>
           </div>
+          <footer class="post__footer">
+            <span class="icon icon_likes"></span> Нравится: <span class="likes-counter">666</span>
+          </footer>
+        </div>
       </article>
       <article class="post">
-          <img class="post__img" src="img/photo-3-mobile.jpg" width="280" height="180">
-          <div class="post__content">
-            <header class="post__header">
-              <h3 class="post__author">Борис</h3>
-              <span class="post__time">(20 часов назад)</span>
-            </header>
-            <div class="post__text">
-              <p>Здесь могла быть ваша цитата о высоком и вечном.</p>
-            </div>
-            <footer class="post__footer">
-              <span class="icon icon_likes"></span> Нравится: <span class="likes-counter">215</span>
-            </footer>
+        <picture>
+          <source media="(min-width: 940px)" srcset="img/photo-3-desktop.jpg">
+          <source media="(min-width: 620px)" srcset="img/photo-3-tablet.jpg">
+          <img class="post__img" src="img/photo-3-mobile.jpg" alt="Панорама дня" width="322" height="137">
+        </picture>
+        <div class="post__content">
+          <header class="post__header">
+            <h3 class="post__author">Борис</h3>
+            <span class="post__time">(20 часов назад)</span>
+          </header>
+          <div class="post__text">
+            <p>Здесь могла быть ваша цитата о высоком и вечном.</p>
           </div>
+          <footer class="post__footer">
+            <span class="icon icon_likes"></span> Нравится: <span class="likes-counter">215</span>
+          </footer>
+        </div>
       </article>
       <article class="post">
-          <img class="post__img" src="img/photo-4-mobile.jpg" width="280" height="180">
-          <div class="post__content">
-            <header class="post__header">
-              <h3 class="post__author">Сергей</h3>
-              <span class="post__time">(25 часов назад)</span>
-            </header>
-            <div class="post__text">
-              <p>Самая кубанская в мире!</p>
-            </div>
-            <footer class="post__footer">
-              <span class="icon icon_likes"></span> Нравится: <span class="likes-counter">4</span>
-            </footer>
+        <picture>
+          <source media="(min-width: 940px)" srcset="img/photo-4-desktop.jpg">
+          <source media="(min-width: 620px)" srcset="img/photo-4-tablet.jpg">
+          <img class="post__img" src="img/photo-4-mobile.jpg" alt="Панорама дня" width="322" height="137">
+        </picture>
+        <div class="post__content">
+          <header class="post__header">
+            <h3 class="post__author">Сергей</h3>
+            <span class="post__time">(25 часов назад)</span>
+          </header>
+          <div class="post__text">
+            <p>Самая кубанская в мире!</p>
           </div>
+          <footer class="post__footer">
+            <span class="icon icon_likes"></span> Нравится: <span class="likes-counter">4</span>
+          </footer>
+        </div>
       </article>
       <article class="post">
-          <img class="post__img" src="img/photo-5-mobile.jpg" width="280" height="180">
-          <div class="post__content">
-            <header class="post__header">
-              <h3 class="post__author">Максим</h3>
-              <span class="post__time">(40 часов назад)</span>
-            </header>
-            <div class="post__text">
-              <p>Где снег-то?</p>
-            </div>
-            <footer class="post__footer">
-              <span class="icon icon_likes"></span> Нравится: <span class="likes-counter">150</span>
-            </footer>
+        <picture>
+          <source media="(min-width: 940px)" srcset="img/photo-5-desktop.jpg">
+          <source media="(min-width: 620px)" srcset="img/photo-5-tablet.jpg">
+          <img class="post__img" src="img/photo-5-mobile.jpg" alt="Панорама дня" width="322" height="137">
+        </picture>
+        <div class="post__content">
+          <header class="post__header">
+            <h3 class="post__author">Максим</h3>
+            <span class="post__time">(40 часов назад)</span>
+          </header>
+          <div class="post__text">
+            <p>Где снег-то?</p>
           </div>
+          <footer class="post__footer">
+            <span class="icon icon_likes"></span> Нравится: <span class="likes-counter">150</span>
+          </footer>
+        </div>
       </article>
       <article class="post">
-          <img class="post__img" src="img/photo-6-mobile.jpg" width="280" height="180">
-          <div class="post__content">
-            <header class="post__header">
-              <h3 class="post__author">Надежда</h3>
-              <span class="post__time">(45 часов назад)</span>
-            </header>
-            <div class="post__text">
-              <p>Всем GM и взаимныые лайки!</p>
-            </div>
-            <footer class="post__footer">
-              <span class="icon icon_likes"></span> Нравится: <span class="likes-counter">2560</span>
-            </footer>
+        <picture>
+          <source media="(min-width: 940px)" srcset="img/photo-6-desktop.jpg">
+          <source media="(min-width: 620px)" srcset="img/photo-6-tablet.jpg">
+          <img class="post__img" src="img/photo-6-mobile.jpg" alt="Панорама дня" width="322" height="137">
+        </picture>
+        <div class="post__content">
+          <header class="post__header">
+            <h3 class="post__author">Надежда</h3>
+            <span class="post__time">(45 часов назад)</span>
+          </header>
+          <div class="post__text">
+            <p>Всем GM и взаимныые лайки!</p>
           </div>
+          <footer class="post__footer">
+            <span class="icon icon_likes"></span> Нравится: <span class="likes-counter">2560</span>
+          </footer>
+        </div>
       </article>
     </div>
 
