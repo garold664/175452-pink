@@ -12,7 +12,13 @@
       <div class="page-header__inner">
         <div class="page-header__head-line page-header__head-line_closed">
           <div class="page-header__head-line-wrapper">
-            <a href="#" class="logo"></a>
+            <a href="#" class="logo">
+              <picture>
+                <source media="(min-width:940px)" srcset="img/logo-pink-white-desktop.svg">
+                <source media="(min-width:620px)" srcset="img/logo-pink-white-tablet.svg">
+                <img src="img/logo-pink-white-mobile.svg">
+              </picture>
+            </a>
             <a href="#" class="page-header__nav-button page-header__nav-button_closed"></a>
           </div>
         </div>
@@ -141,7 +147,10 @@
   <footer class="page-footer page-footer_form">
     <div class="page-footer__logo">
       <a class="logo" href="#">
-        <img src="img/logo-pink-blue-mobile.svg" alt="Pink">
+        <picture>
+          <source media="(min-width:940px)" srcset="img/logo-pink-blue-desktop.svg">
+          <img src="img/logo-pink-blue-mobile.svg">
+        </picture>
       </a>
     </div>
     <div class="page-footer__social">
@@ -157,6 +166,7 @@
     </div>
   </footer>
 
+  <script src="js/picturefill.min.js"></script>
   <script src="js/common.js"></script>
 
 </body>

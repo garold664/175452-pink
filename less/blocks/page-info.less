@@ -83,10 +83,10 @@
       flex-direction: row;
       justify-content: space-between;
       margin-top: 50px;
-      &_pic {
-        width: 830px;
-        margin: auto;
-      }
+    }
+    &__items_pic {
+      width: 100%;
+      margin: auto;
     }
     &__item {
       width: 300px;
@@ -97,20 +97,11 @@
     &__item_pic {
       position: relative;
       flex-grow: 0;
-      width: 187px;
-      height: 300px;
+      width: 292px;
+      height: 302px;
     }
     &__item_pic:nth-child(-n+2) {
       display: block;
-    }
-    &__item_pic::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: -28%;
-      width: 294px;
-      height: 17px;
-      background-image: url(../img/pic-shadow.png);
     }
     &__item-title {
       margin-bottom: 23px;

@@ -43,9 +43,12 @@
         Взгляните на жизнь иначе!
       </div>
       <picture class="page-header__pic">
-        <source media="(min-width:940px)" srcset="img/iphone-hand-desktop.png">
-        <source media="(min-width:620px)" srcset="img/iphone-hand-tablet.png">
-        <img src="img/iphone-hand-mobile.png">
+        <source media="(min-width:940px)" srcset="img/iphone-hand-desktop@1x.png 1x
+                                                  img/iphone-hand-desktop@2x.png 2x">
+        <source media="(min-width:620px)" srcset="img/iphone-hand-tablet@1x.png 1x,
+                                                  img/iphone-hand-tablet@2x.png 2x">
+        <img src="img/iphone-hand-mobile.png" srcset="img/iphone-hand-mobile.png 1x,
+                      img/iphone-hand-mobile@2x.png 2x">
       </picture>
       <div class="app">
         <div class="app__wrapper">
@@ -78,23 +81,30 @@
         <ul class="page-info__items page-info__items_pic">
           <li class="page-info__item page-info__item_pic">
             <picture>
-              <source media="(min-width: 940px)" srcset="img/iphone-screen_1-desktop.png">
-              <source media="(min-width: 620px)" srcset="img/iphone-screen-tablet.png">
+              <source media="(min-width: 940px)" srcset="img/iphone-screen-desktop-1@1x.png 1x,
+              img/iphone-screen-desktop-1@2x.png 2x">
+              <source media="(min-width: 620px)" srcset="img/iphone-screen-tablet-1@1x.png 1x,
+              img/iphone-screen-tablet-1@2x.png 2x">
               <img src="img/iphone-screen-mobile.png" alt="iphone-screen">
             </picture>
           </li>
           <li class="page-info__item page-info__item_pic">
             <picture>
-              <source media="(min-width: 940px)" srcset="img/iphone-screen_2-desktop.png">
-              <source media="(min-width: 620px)" srcset="img/iphone-screen-tablet.png">
+              <source media="(min-width: 940px)" srcset="img/iphone-screen-desktop-2@1x.png 1x,
+              img/iphone-screen-desktop-2@2x.png 2x">
+              <source media="(min-width: 620px)" srcset="img/iphone-screen-tablet-2@1x.png 1x,
+              img/iphone-screen-tablet-2@2x.png 2x">
               <img src="img/iphone-screen-mobile.png" alt="iphone-screen">
             </picture>
           </li>
           <li class="page-info__item page-info__item_pic">
             <picture>
-              <source media="(min-width: 940px)" srcset="img/iphone-screen-desktop.png">
-              <source media="(min-width: 620px)" srcset="img/iphone-screen-tablet.png">
-              <img src="img/iphone-screen-mobile.png" alt="iphone-screen">
+              <source media="(min-width: 940px)" srcset="img/iphone-screen-desktop-3@1x.png 1x,
+              img/iphone-screen-desktop-3@2x.png 2x">
+              <source media="(min-width: 620px)" srcset="img/iphone-screen-tablet-3@1x.png 1x,
+              img/iphone-screen-tablet-3@2x.png 2x">
+              <img src="img/iphone-screen-mobile.png" srcset="img/iphone-screen-mobile.png 1x
+                            img/iphone-screen-mobile@2x.png" alt="iphone-screen">
             </picture>
           </li>
         </ul>
@@ -300,12 +310,13 @@
     <div class="page-footer__made-in">
       Разработано
       <a class="page-footer__made-in-link link" href="#">
-          <img src="img/logo-htmlacademy.svg" alt="HTML Academy" width="27" height="34\">
+          <img src="img/logo-htmlacademy.svg" alt="HTML Academy" width="27" height="34">
       </a>
     </div>
   </footer>
 
   <script src="js/common.js"></script>
+  <script src="js/picturefill.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"> </script>
   <script>
     ymaps.ready(init);
