@@ -1,60 +1,115 @@
 .contacts {
-  .outline(#00c, '.contacts');
-  min-height: 612px;
+  line-height: 30px;
+  text-align: center;
+  font-weight: 300;
   .contacts__wrapper {
-    .outline(#f00,'.contacts__wrapper');
     .container;
-    min-height: 445px;
   }
   &__title {
-    .outline(#330,'.contacts__title',-40);
-    min-height: 120px;
+    padding: 40px 0 7px;
+    font-size: 24px;
+    color: @dark-blue;
   }
   &__list {
-    .outline(#330,'.contacts__title',-40);
+    padding-top: 5px;
   }
   &__item {
-    .outline(#0f0,'.contacts__item');
-    min-height: 100px;
+    padding-top: 16px;
   }
   &__term {
-
+    font-size: 18px;
+    font-weight: 700;
   }
   &__description {
+    font-size: 24px;
     color: #d22856;
-    a {
-      color: #d22856;
-    }
+  }
+  &__description a {
+    color: #d22856;
+  }
+  &__description_mail a:hover {
+    text-decoration: underline;
+    color: @dark-blue;
+  }
+  &__description_mail a:active {
+    text-decoration: none;
+    color: #ced0d2;
+  }
+  &__map {
+    position: relative;
+    max-width: 1400px;
+    height: 252px;
+    margin: 0 auto;
+    background-image: url(../img/bg-triangle-white-footer.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto;
+  }
+  &__map::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 80px;
+    background-image: url(../img/bg-triangle-white-footer.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 
 @media @tablet-widths {
   .contacts {
-    min-height: 780px;
     &__title {
-      min-height: 155px;
+      padding: 50px 50px 7px;
+      font-size: 40px;
+      line-height: 45px;
     }
     &__list {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
       align-content: space-around;
-      min-height: 245px;
     }
     &__item {
-      width: 250px;
+      width: 230px;
+      padding-top: 34px;
+      padding-bottom: 12px;
+    }
+    &__map {
+      height: 388px;
+    }
+    &__map::after {
+      height: 100px;
     }
   }
 }
 
 @media @desktop-widths {
   .contacts {
-    min-height: 868px;
+    margin-bottom: 32px;
     &__title {
-      min-height: 200px;
+      padding: 60px 120px 30px;
+      font-size: 50px;
+      line-height: 60px;
     }
     &__list {
-      min-height: 160px;
+    }
+    &__item {
+      padding-top: 13px;
+      padding-bottom: 0;
+    }
+    &__item:nth-child(2) {
+      order: 1;
+    }
+    &__description {
+      margin-top: 20px;
+    }
+    &__map {
+      height: 525px;
+    }
+    &__map::after {
+      height: 150px;
     }
   }
 }
