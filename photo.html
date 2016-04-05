@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Пинк. Фотографии</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="photo-page">
   <header class="page-header">
@@ -16,13 +16,13 @@
               <picture>
                 <source media="(min-width:940px)" srcset="img/logo-pink-white-desktop.svg">
                 <source media="(min-width:620px)" srcset="img/logo-pink-white-tablet.svg">
-                <img src="img/logo-pink-white-mobile.svg">
+                <img src="img/logo-pink-white-mobile.svg"  alt="Pink">
               </picture>
             </a>
             <a href="#" class="page-header__nav-button page-header__nav-button_closed"></a>
           </div>
         </div>
-        <div class="page-nav page-nav_closed">
+        <ul class="page-nav page-nav_closed">
           <li class="page-nav__item item">
             <a class="page-nav__link link" href="index.html">Главная</a>
           </li>
@@ -35,7 +35,7 @@
           <li class="page-nav__item item">
             <a class="page-nav__link link" href="https://htmlacademy.ru/">HTML Academy</a>
           </li>
-        </div>
+        </ul>
       </div>
     </div>
     <div class="page-header__slogan">
@@ -217,7 +217,14 @@
 
     <div class="add-photo">
       <div class="add-photo__wrapper">
-        <img class="add-photo__img" src="img/photo-7-mobile.jpg" width="280" height="374">
+        <picture>
+          <source media="(min-width: 940px)" srcset="img/photo-7-desktop.jpg 1x,
+                                                      img/photo-7-desktop@2x.jpg 2x">
+          <source media="(min-width: 620px)" srcset="img/photo-7-tablet.jpg 1x,
+                                                      img/photo-7-tablet@2x.jpg 2x">
+          <img class="add-photo__img" src="img/photo-6-mobile.jpg" srcset="img/photo-7-mobile.jpg 1x,
+                                                                      img/photo-7-mobile@2x.jpg 2x" alt="Панорама дня" width="280" height="374">
+        </picture>
         <div class="add-photo__tools">
           <input class="add-photo__tool-chooser" type="radio"  id="tool-chooser-1" name="tool-chooser" checked="checked">
           <input class="add-photo__tool-chooser" type="radio"  id="tool-chooser-2" name="tool-chooser">
@@ -256,7 +263,7 @@
       <a class="logo" href="#">
         <picture>
           <source media="(min-width:940px)" srcset="img/logo-pink-blue-desktop.svg">
-          <img src="img/logo-pink-blue-mobile.svg">
+          <img src="img/logo-pink-blue-mobile.svg"  alt="Pink">
         </picture>
       </a>
     </div>

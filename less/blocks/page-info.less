@@ -49,27 +49,26 @@
       padding-top: 2px;
     }
     &__items {
-      flex-grow: 1;
+      width: 270px;
+      flex: 0 1 auto;
       margin-top: 65px;
-      &_pic {
-
-        order: 0;
-        flex-grow: 0;
-        margin-top: 0;
-        margin-right: 40px;
-      }
+    }
+    &__items_pic {
+      order: 0;
+      flex-grow: 0;
+      margin-top: 0;
+      margin-right: 40px;
     }
     &__item {
       text-align: left;
       margin-bottom: 28px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-      &_pic {
-        width: 270px;
-        height: 480px;
-      }
-
+    }
+    &__item:last-child {
+      margin-bottom: 0;
+    }
+    &__item_pic {
+      width: 270px;
+      height: 480px;
     }
   }
 }
@@ -80,6 +79,7 @@
       flex-direction: column;
     }
     &__items {
+      width: auto;
       flex-direction: row;
       justify-content: space-between;
       margin-top: 50px;

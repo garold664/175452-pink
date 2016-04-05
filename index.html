@@ -4,25 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Пинк</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
   <header class="page-header">
     <div class="page-header__nav-wrapper">
       <div class="page-header__inner">
-        <div class="page-header__head-line page-header__head-line_closed">
+        <div class="page-header__head-line">
           <div class="page-header__head-line-wrapper">
             <a class="logo" href="#">
               <picture>
                 <source media="(min-width:940px)" srcset="img/logo-pink-white-desktop.svg">
                 <source media="(min-width:620px)" srcset="img/logo-pink-white-tablet.svg">
-                <img src="img/logo-pink-white-mobile.svg">
+                <img src="img/logo-pink-white-mobile.svg" alt="Pink">
               </picture>
             </a>
             <a href="#" class="page-header__nav-button page-header__nav-button_closed"></a>
           </div>
         </div>
-        <div class="page-nav page-nav_closed">
+        <ul class="page-nav page-nav_closed page-nav_nojs">
           <li class="page-nav__item page-nav__item_active item">
             <a class="page-nav__link link">Главная</a>
           </li>
@@ -35,21 +35,23 @@
           <li class="page-nav__item item">
             <a class="page-nav__link link" href="https://htmlacademy.ru/">HTML Academy</a>
           </li>
-        </div>
+        </ul>
       </div>
     </div>
     <div class="page-header__container">
       <div class="page-header__slogan">
         Взгляните на жизнь иначе!
       </div>
-      <picture class="page-header__pic">
-        <source media="(min-width:940px)" srcset="img/iphone-hand-desktop@1x.png 1x
-                                                  img/iphone-hand-desktop@2x.png 2x">
-        <source media="(min-width:620px)" srcset="img/iphone-hand-tablet@1x.png 1x,
-                                                  img/iphone-hand-tablet@2x.png 2x">
-        <img src="img/iphone-hand-mobile.png" srcset="img/iphone-hand-mobile.png 1x,
-                      img/iphone-hand-mobile@2x.png 2x">
-      </picture>
+      <div class="page-header__pic">
+        <picture>
+          <source media="(min-width:940px)" srcset="img/iphone-hand-desktop@1x.png 1x,
+                                                    img/iphone-hand-desktop@2x.png 2x">
+          <source media="(min-width:620px)" srcset="img/iphone-hand-tablet@1x.png 1x,
+                                                    img/iphone-hand-tablet@2x.png 2x">
+          <img src="img/iphone-hand-mobile.png" srcset="img/iphone-hand-mobile.png 1x,
+                        img/iphone-hand-mobile@2x.png 2x" alt="Айфон в руке">
+        </picture>
+      </div>
       <div class="app">
         <div class="app__wrapper">
           <a class="app__btn link" href="#">Скачать приложение</a>
@@ -103,8 +105,8 @@
               img/iphone-screen-desktop-3@2x.png 2x">
               <source media="(min-width: 620px)" srcset="img/iphone-screen-tablet-3@1x.png 1x,
               img/iphone-screen-tablet-3@2x.png 2x">
-              <img src="img/iphone-screen-mobile.png" srcset="img/iphone-screen-mobile.png 1x
-                            img/iphone-screen-mobile@2x.png" alt="iphone-screen">
+              <img src="img/iphone-screen-mobile.png" srcset="img/iphone-screen-mobile.png 1x,
+                            img/iphone-screen-mobile@2x.png 2x" alt="iphone-screen">
             </picture>
           </li>
         </ul>
@@ -267,7 +269,7 @@
       </div>
     </div>
   </main>
-  <section class="contacts">
+  <div class="contacts">
     <div class="contacts__wrapper">
       <div class="contacts__title">
         Остались вопросы?
@@ -292,13 +294,13 @@
     <div class="contacts__map">
       <div id="map" style="width: 100%; height: 100%"></div>
     </div>
-  </section>
+  </div>
   <footer class="page-footer">
     <div class="page-footer__logo">
       <a class="logo" href="#">
         <picture>
           <source media="(min-width:940px)" srcset="img/logo-pink-blue-desktop.svg">
-          <img src="img/logo-pink-blue-mobile.svg">
+          <img src="img/logo-pink-blue-mobile.svg" alt="Pink">
         </picture>
       </a>
     </div>

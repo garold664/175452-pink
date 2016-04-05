@@ -75,12 +75,13 @@
   }
   &__checkbox-label {
     display: inline-block;
+    vertical-align: middle;
     position: relative;
     margin-bottom: 43px;
     cursor: pointer;
   }
   &__checkbox-label::before {
-    content: '';
+    content: "";
     display: inline-block;
     vertical-align: middle;
     width: 35px;
@@ -96,7 +97,7 @@
     border-color: @pink;
   }
   &__checkbox-input:checked + &__checkbox-label::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 8px;
     top: 9px;
@@ -139,12 +140,14 @@
     font-size: 18px;
     line-height: 30px;
     resize: none;
+    overflow: auto;
   }
   &__footer {
     .container;
   }
   &__btn {
     display: inline-block;
+    vertical-align: middle;
     width: 100%;
     margin-top: 10px;
     border: none;
@@ -262,6 +265,7 @@
     }
     &__section-title span {
       display: inline-block;
+      vertical-align: middle;
       padding: 0 30px;
       background: #fff;
     }
@@ -375,7 +379,7 @@
       flex-wrap: wrap;
       align-items: flex-start;
       align-content: space-between;
-      max-height: 245px;
+      height: 165px;
     }
     &__section_attainments &__checkbox-label:first-of-type {
       margin-top: 0;

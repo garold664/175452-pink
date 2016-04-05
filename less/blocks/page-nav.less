@@ -7,7 +7,9 @@
   &_closed {
     display: none;
   }
-  &__wrapper {
+  &_nojs {
+    display: block;
+    position: static;
   }
   &__wrapper_closed {
     display: none;
@@ -30,6 +32,12 @@
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
+  }
+  &__link:hover {
+    color: @pink;
+  }
+  &__link:active {
+    color: fadeout(@pink, 50%);
   }
 }
 
@@ -59,6 +67,7 @@
     }
     &__item:active {
       opacity: 0.5;
+      border-style: none;
     }
     &__item:last-child {
       margin-right: 0;
@@ -66,6 +75,9 @@
     &__link {
       text-transform: none;
       font-weight: 400;
+    }
+    &__link:hover {
+      color: #fff;
     }
   }
 }

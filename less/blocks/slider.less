@@ -1,13 +1,5 @@
 .slider {
   position: relative;
-  &__list {
-
-  }
-  &__slide {
-    &_active {
-
-    }
-  }
   &__nav {
     position: absolute;
     left: 50%;
@@ -55,6 +47,7 @@
   &__nav-btn::after {
     content: "";
     display: inline-block;
+    vertical-align: middle;
     width: 6px;
     height: 6px;
     border: 3px solid transparent;
@@ -102,6 +95,7 @@
     }
     &__arrow {
       display: inline-block;
+      vertical-align: middle;
       position: absolute;
     }
     &__arrow_next {
