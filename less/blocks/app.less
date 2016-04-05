@@ -1,41 +1,78 @@
 .app {
-  .outline(#f00,".app");
-  min-height: 270px;
-  /*
+  padding-top: 30px;
+  text-align: center;
   color: #fff;
   background-color: #1d2631;
-  */
+  &__wrapper {
+    width: 280px;
+    margin: 0 auto;
+  }
   &__btn {
-    display: inline-block;
+    display: block;
+    padding: 10px;
     border: 3px solid #fff;
+    border-radius: 25px;
+    font-family: @opensans;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
     color: #fff;
   }
+  &__btn:hover {
+    background-color: #fff;
+    color: @pink;
+  }
+  &__btn:active {
+    color: fadeout(@pink,50%);
+  }
   &__platforms {
-
+    margin-top: 32px;
+    margin-bottom: 15px;
   }
   &__platform {
-    &_apple {
-
-    }
-    &_android {
-
-    }
-    &_windows {
-
-    }
+    display: inline-block;
+    margin: 0 15px;
+    vertical-align: bottom;
   }
   &__description {
-
+    padding: 0 15px 30px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
   }
 }
 
 @media @tablet-widths {
   .app {
+    position: relative;
     width: 300px;
+    padding-top: 20px;
+    background: transparent;
+    &__wrapper {
+      width: auto;
+    }
+    &__btn {
+      font-size: 18px;
+    }
+    &__platforms {
+      margin: 45px 0 30px;
+    }
+    &__description {
+      font-size: 18px;
+      line-height: 24px;
+      padding: 0 0 30px;
+    }
   }
 }
 @media @desktop-widths {
   .app {
-    min-height: 330px;
+    padding-top: 5px;
+    margin-bottom: 90px;
+    &__btn {
+      font-size: 21px;
+    }
+    &__platforms {
+      margin: 68px 0 50px;
+    }
   }
 }

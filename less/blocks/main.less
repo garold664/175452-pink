@@ -1,29 +1,49 @@
 .main {
-  &_photo {
-  }
   &__title {
-    .outline(#0f0,'.main__title');
-    min-height: 215px;
     .container;
-    padding: 6px 58px 30px;
+    padding: 18px 38px 30px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 300;
+    color: @dark-blue;
+  }
+  &__title p {
+    margin-top: 25px;
   }
 }
 
 
 @media @tablet-widths {
-  .main{
+  .main {
     &__title {
-      min-height: 240px;
-      padding-bottom: 46px;
+      padding: 45px 0 50px;
+      font-size: 40px;
+      line-height: 45px;
+    }
+    &__title p {
+      margin-top: 5px;
+    }
+    &__title p:last-child {
+      padding: 0 45px;
     }
   }
 }
 
 
 @media @desktop-widths {
-  .main{
+  .main {
     &__title {
-      min-height: 320px;
+      padding-top: 65px;
+      padding-bottom: 75px;
+      font-size: 50px;
+      line-height: 60px;
+    }
+    &__title p {
+      margin: 0;
+    }
+    &__title p:last-child {
+      padding: 0 110px;
     }
   }
 }

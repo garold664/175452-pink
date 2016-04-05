@@ -1,7 +1,5 @@
 .research {
-  .outline(#cc0,'.research');
   &__wrapper{
-    .outline(#f00,'.research__wrapper');
     display: none;
     .container;
   }
@@ -11,10 +9,40 @@
 @media @tablet-widths {
   .research {
     &__wrapper {
+      position: relative;
       display: block;
-      min-height: 400px;
-      padding-left: 310px;
-      padding-top: 105px;
+      padding: 100px 5px 90px 310px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+    &__wrapper::after {
+      content: "24";
+      position: absolute;
+      left: 0;
+      top: 60px;
+      width: 240px;
+      height: 277px;
+      font-size: 96px;
+      line-height: 305px;
+      font-weight: 700;
+      text-align: center;
+      color: @pink;
+      background-image: url(../img/icon-timer.svg);
+      background-repeat: no-repeat;
+    }
+    &__title {
+      margin: 0;
+      margin-bottom: 10px;
+      font-size: 30px;
+      line-height: 36px;
+
+    }
+    &__content {
+      margin-bottom: 10px;
+    }
+    &__link {
+      text-decoration: underline;
+      color: @pink;
     }
   }
 }
@@ -23,9 +51,28 @@
 @media @desktop-widths {
   .research {
     &__wrapper {
-      min-height: 470px;
-      padding-left: 365px;
-      padding-top: 152px;
+      padding: 145px 75px 112px 365px;
+      font-size: 18px;
+      line-height: 30px;
+    }
+    &__wrapper::after {
+      top: 50px;
+      width: 300px;
+      height: 347px;
+      font-size: 120px;
+      line-height: 375px;
+    }
+    &__title {
+      margin: 0;
+      margin-bottom: 25px;
+      font-size: 30px;
+      line-height: 30px;
+    }
+    &__title br {
+      display: none;
+    }
+    &__content {
+      margin-bottom: 30px;
     }
   }
 }
