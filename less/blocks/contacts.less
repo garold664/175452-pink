@@ -2,8 +2,9 @@
   line-height: 30px;
   text-align: center;
   font-weight: 300;
-  .contacts__wrapper {
+  &__wrapper {
     .container;
+    padding-bottom: 30px;
   }
   &__title {
     padding: 40px 0 7px;
@@ -38,7 +39,7 @@
   &__map {
     position: relative;
     max-width: 1400px;
-    height: 252px;
+    height: 202px;
     margin: 0 auto;
     background-image: url(../img/bg-triangle-white-footer.svg);
     background-repeat: no-repeat;
@@ -60,6 +61,9 @@
 
 @media @tablet-widths {
   .contacts {
+    &__wrapper {
+      padding-bottom: 0;
+    }
     &__title {
       padding: 50px 50px 7px;
       font-size: 40px;
