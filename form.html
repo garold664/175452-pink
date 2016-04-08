@@ -49,21 +49,21 @@
       <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span class="announce__hidden">Пожалуйста, заполните форму ниже:</span></p>
     </div>
     <form class="form" action="/echo" method="post">
-      <section class="form__section form__section_name">
+      <fieldset class="form__section form__section_name">
         <div class="form__inputs-group">
           <label class="form__text-label" for="name">Имя:</label>
-          <input class="form__text-input" type="text" name="name" id="name" value="Введите ваше имя">
+          <input class="form__text-input" type="text" name="name" id="name" placeholder="Введите ваше имя">
         </div>
         <div class="form__inputs-group">
           <label class="form__text-label" for="surname">Фамилия:</label>
-          <input class="form__text-input" type="text" name="surname" id="surname" value="Укажите фамилию">
+          <input class="form__text-input" type="text" name="surname" id="surname" placeholder="Укажите фамилию">
         </div>
         <div class="form__inputs-group">
           <label class="form__text-label" for="patronymic">Отчество:</label>
-          <input class="form__text-input" type="text" name="patronymic" id="patronymic" value="Ну и отчество тоже">
+          <input class="form__text-input" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
         </div>
-      </section>
-      <section class="form__section form__section_attainments form__section_gray">
+      </fieldset>
+      <fieldset class="form__section form__section_attainments form__section_gray">
         <div class="form__section-wrapper">
           <h2 class="form__section-title"><span>Ваши безбашенные достижения в путешествии</span></h2>
           <div class="form__inputs-group">
@@ -86,21 +86,21 @@
             <label class="form__checkbox-label" for="checkbox-6">Разгромил отель</label>
           </div>
         </div>
-      </section>
-      <section class="form__section form__section_contacts">
+      </fieldset>
+      <fieldset class="form__section form__section_contacts">
         <div class="form__section-wrapper">
           <h2 class="form__section-title form__section-title_mobile-hidden"><span>Контактная информация</span></h2>
           <div class="form__inputs-group form__inputs-group_contacts">
             <label class="form__text-label" for="tel">Номерок телефончика</label>
-            <input class="form__text-input form__text-input_contacts" type="tel" name="tel" id="tel" value="Номер, пожалуйста">
+            <input class="form__text-input form__text-input_contacts" type="tel" name="tel" id="tel" placeholder="Номер, пожалуйста">
           </div>
           <div class="form__inputs-group form__inputs-group_contacts">
             <label class="form__text-label" for="email">Адресок почты</label>
-            <input class="form__text-input form__text-input_contacts" type="email" name="email" id="email" value="Email, пожалуйста">
+            <input class="form__text-input form__text-input_contacts" type="email" name="email" id="email" placeholder="Email, пожалуйста">
           </div>
         </div>
-      </section>
-      <section class="form__section form__section_app form__section_gray">
+      </fieldset>
+      <fieldset class="form__section form__section_app form__section_gray">
         <div class="form__section-wrapper">
           <h2 class="form__section-title"><span>С каким приложением путешествовали</span></h2>
           <input class="form__checkbox-input" type="radio" name="os" id="ios" value="ios" checked>
@@ -112,13 +112,13 @@
           <input class="form__checkbox-input" type="radio" name="os" id="windows" value="windows">
           <label class="form__checkbox-label form__checkbox-label_radio" for="windows">Windows Phone</label>
         </div>
-      </section>
-      <section class="form__section form__section_emotions">
+      </fieldset>
+      <fieldset class="form__section form__section_emotions">
         <div class="form__section-wrapper">
           <h2 class="form__section-title form__section-title_emotions"><span>Опишите свои эмоции</span></h2>
           <textarea class="form__textarea" name="emotions" rows="5">Можно прям в красках, не стесняясь в выражениях</textarea>
         </div>
-      </section>
+      </fieldset>
       <div class="form__footer">
         <button class="form__btn" type="submit">Отправить форму</button>
         <p class="form__note"><i>*</i> &mdash;  обязательные <span class="form__mobile-hidden">для заполнения</span> поля</p>
