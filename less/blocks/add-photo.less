@@ -65,7 +65,6 @@
     display: inline-block;
     vertical-align: middle;
     position: absolute;
-    left: 80%;
     top: -6px;
     width: 14px;
     height: 14px;
@@ -76,6 +75,9 @@
   }
   &__range-btn:active {
     background-color: @pink;
+  }
+  &__range_crop &__range-btn {
+    left: 80%;
   }
   &__range_fill &__range-btn {
     left: 20%;
@@ -179,7 +181,7 @@
       margin-bottom: 16px;
       padding: 18px 18px 34px 55px;
       background-repeat: no-repeat;
-      background-size: 25px auto;
+      background-size: 25px 25px;
       background-position: 5px 30%;
     }
     &__range_crop {
@@ -190,7 +192,16 @@
     }
     &__range_contrast {
       background-image: url(../img/icon-editor-contrast_active.svg);
-      background-size: 18px auto;
+      background-size: 18px 18px;
+    }
+    &__range_crop &__range-btn {
+      left: 72%;
+    }
+    &__range_fill &__range-btn {
+      left: 12%;
+    }
+    &__range_contrast &__range-btn {
+      left: 47%;
     }
     &__btns {
       width: auto;
@@ -226,11 +237,20 @@
       margin-bottom: 18px;
       padding-right: 30px;
       padding-left: 92px;
-      background-size: auto;
+      background-size: 44px 44px;
       background-position: 0 0;
     }
+    &__range_crop &__range-btn {
+      left: 25%;
+    }
+    &__range_fill &__range-btn {
+      left: 86%;
+    }
+    &__range_contrast &__range-btn {
+      left: 56%;
+    }
     &__range_contrast {
-      background-size: 35px auto;
+      background-size: 35px 35px;
       background-position: 5px 0;
     }
     &__btns {

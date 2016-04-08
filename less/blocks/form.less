@@ -2,7 +2,10 @@
   display: flex;
   flex-direction: column;
   &__section {
+    margin: 0;
+    padding: 0;
     margin-bottom: 30px;
+    border-style: none;
   }
   &__section_name,
   &__section_contacts,
@@ -13,7 +16,8 @@
   &__section_contacts {
     margin-bottom: 35px;
   }
-  &__section:nth-child(even) {
+  &__section_gray {
+    background-color: #f2f2f2;
   }
   &__section-wrapper {
     .container;
@@ -33,26 +37,19 @@
   &__text-input {
     margin-bottom: 16px;
     border: 2px solid @gray;
-    padding: 15px 22px;
+    padding: 18px 22px;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 24px;
     font-family: @opensans;
     color: @dark-blue;
     outline: none;
   }
   &__text-input_contacts {
-    position: relative;
     width: 100%;
     margin-bottom: 20px;
-    background-repeat: no-repeat;
-    background-size: 20px;
-    background-position: 96% 50%;
   }
-  &__text-input[type="tel"] {
-    background-image: url(../img/phone.svg);
-  }
-  &__text-input[type="email"] {
-    background-image: url(../img/mail.svg);
+  &__text-input::placeholder {
+    color: @dark-blue;
   }
   &__section-title {
       padding: 37px 15px;
@@ -135,6 +132,7 @@
   }
   &__textarea {
     width: 100%;
+    height: 199px;
     padding: 15px 20px 32px;
     font-family: @opensans;
     font-size: 18px;
@@ -230,7 +228,7 @@
 
 @media @tablet-widths {
     .form {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     &__section {
       margin-bottom: 65px;
       &_name {
@@ -250,6 +248,9 @@
       &_app &-wrapper {
         border: 2px solid @gray;
       }
+    }
+    &__section_gray {
+      background-color: transparent;
     }
     &__section-wrapper {
       position: relative;
@@ -298,6 +299,17 @@
     &__text-input {
       flex-grow: 1;
       margin-bottom: 0;
+    }
+    &__text-input_contacts {
+      background-repeat: no-repeat;
+      background-size: 20px 40px;
+      background-position: 96% 50%;
+    }
+    &__text-input[type="tel"] {
+      background-image: url(../img/phone.svg);
+    }
+    &__text-input[type="email"] {
+      background-image: url(../img/mail.svg);
     }
     &__checkbox-label {
       display: block;
@@ -386,6 +398,9 @@
     }
     &__section_emotions {
       margin-bottom: 58px;
+    }
+    &__checkbox-label::before {
+      margin-right: 15px;
     }
     &__textarea {
       height: 130px;

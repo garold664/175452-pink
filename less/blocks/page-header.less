@@ -1,0 +1,243 @@
+.page-header {
+  position: relative;
+  background-color: #1d2631;
+  background-image: url(../img/bg-back-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: auto 80%;
+  background-size: cover;
+  background-position: center 0;
+  &__head-line {
+    .clearfix;
+    position: relative;
+    z-index: 10;
+    padding: 23px 0;
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px #485360;
+    background-color: @dark-blue;
+  }
+  &__head-line_closed {
+    padding: 20px 0;
+    background-color: rgba(0,0,0,0.3);
+    border-bottom-color: transparent;
+    box-shadow: none;
+  }
+  &__head-line-wrapper {
+    .container;
+    .clearfix;
+  }
+  &__nav-button {
+    float: right;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    color: transparent;
+    font-size: 0;
+  }
+  &__nav-button::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 7px;
+    height: 5px;
+    width: 30px;
+    background: #fff;
+    transform: rotate(45deg);
+    transition: transform 2s;
+  }
+  &__nav-button::after {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 5px;
+    background: #fff;
+    top: -5px;
+    left: 16px;
+    transform: rotate(45deg);
+    transition: transform 2s;
+  }
+  &__nav-button:hover::after,
+  &__nav-button:hover::before {
+    background-color: @pink;
+  }
+
+  &__nav-button:active::after,
+  &__nav-button:active::before {
+    opacity: 0.5;
+  }
+  &__nav-button_closed {
+    width: 50px;
+    height: 28px;
+  }
+  &__nav-button_closed::before {
+    width: 50px;
+    height: 4px;
+    transform: rotate(0deg);
+    left: 0;
+    top: -1px;
+    transition: transform 2s;
+    box-shadow: 0 10px 0 #fff;
+  }
+  &__nav-button_closed::after {
+    height: 4px;
+    width: 50px;
+    transform: rotate(0deg);
+    left: 0;
+    top: 20px;
+    transition: transform 2s;
+  }
+  &__nav-button_closed:hover::before {
+    box-shadow: 0 10px 0 @pink;
+  }
+  &__nav-button_closed:active::before {
+    box-shadow: 0 10px 0 fadeout(@pink,50%);
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  &__slogan {
+    width: 280px;
+    margin: 0 auto;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 300;
+    text-align: center;
+    padding: 18px 0 26px;
+    color: #fff;
+  }
+  .form-page &__slogan,  {
+    padding-top: 28px;
+    padding-bottom: 50px;
+  }
+  .photo-page &__slogan {
+    padding-top: 28px;
+    padding-bottom: 82px;
+  }
+  &__slogan-wrapper {
+    .container;
+  }
+  &__pic {
+    height: 286px;
+  }
+  &__pic img {
+    width: 258px;
+    height: 286px;
+  }
+}
+
+@media @mobile-widths-only and (min-resolution: 1.5dppx),
+       @mobile-widths-only and (min-resolution: 144dpi) {
+  .page-header {
+    background-image: url(../img/bg-back-mobile@2x.jpg);
+  }
+}
+@media @tablet-widths {
+  .page-header {
+    background-image: url(../img/bg-back-tablet@1x.jpg);
+    .clearfix;
+    background-size: cover;
+    .photo-page & {
+      margin-bottom: 25px;
+    }
+    &__head-line {
+      padding: 25px 0 40px;
+    }
+    &__nav-button {
+      margin-top: 20px;
+    }
+    &__container {
+      .container;
+      height: 600px;
+      margin-top: 15px;
+      overflow: hidden;
+    }
+    &__pic {
+      order: 1;
+    }
+    &__pic img {
+      margin-left: -340px;
+      margin-top: 55px;
+      width: 700px;
+      height: 545px;
+    }
+    &__slogan {
+      width: 300px;
+      padding: 75px 35px 15px;
+      font-size: 40px;
+      line-height: 48px;
+    }
+    .form-page &__slogan, .photo-page &__slogan {
+      padding-top: 70px;
+      padding-bottom: 83px;
+      padding: 70px 0 83px;
+      font-size: 50px;
+      line-height: 60px;
+      width: auto;
+    }
+    .photo-page &__slogan {
+      padding-bottom: 140px;
+    }
+  }
+  @media (min-resolution: 1.5dppx),
+         (min-resolution: 144dpi) {
+    .page-header {
+      background-image: url(../img/bg-back-tablet@2x.jpg);
+    }
+  }
+}
+
+@media @desktop-widths {
+  .page-header {
+    background-image: url(../img/bg-back-desktop.jpg);
+    &__nav-wrapper {
+      padding: 25px 0 21px;
+      background: rgba(0, 0, 0, 0.3);
+    }
+    &__inner {
+      width: 940px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__head-line {
+      padding: 0;
+      border: none;
+      box-shadow: none;
+      background: none;
+    }
+    &__head-line-wrapper {
+      width: auto;
+    }
+    &__nav-button {
+      display: none;
+    }
+    &__container {
+      margin-top: 98px;
+      height: 666px;
+    }
+    &__pic img {
+      margin: 0;
+      margin-left: -286px;
+      width: 1050px;
+      height: 645px;
+    }
+    &__slogan {
+      font-size: 50px;
+      line-height: 60px;
+      padding: 10px 30px 45px;
+      margin: 0;
+    }
+    .form-page &__slogan, .photo-page &__slogan {
+        padding-top: 60px;
+        padding-bottom: 104px;
+    }
+    .photo-page &__slogan-wrapper {
+      padding: 0 145px;
+    }
+    .photo-page & {
+      margin-bottom: 30px;
+    }
+  }
+
+}

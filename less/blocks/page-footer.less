@@ -1,0 +1,70 @@
+.page-footer {
+  .container;
+  display: none;
+  padding: 25px 0 45px;
+  &_form, &_photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  & .logo {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+    height: auto;
+  }
+  &__social {
+    margin-top: 30px;
+  }
+  &__made-in {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 18px;
+    color: @dark-blue;
+  }
+  &__made-in-link {
+    margin-left: 12px;
+    vertical-align: middle;
+  }
+  &__made-in-link img {
+    vertical-align: middle;
+  }
+}
+
+@media @tablet-widths {
+  .page-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px 0 38px;
+    &__made-in {
+      padding-left: 20px;
+    }
+    .photo-page & {
+      padding-top: 0;
+    }
+  }
+}
+@media @desktop-widths {
+  .page-footer {
+    padding: 15px 0 70px;
+    &__social {
+      margin-top: 0;
+      margin-left: 10px;
+    }
+    &__made-in {
+      padding-left: 0;
+      font-size: 18px;
+    }
+    &__made-in-link {
+      margin-left: 10px;
+    }
+  .photo-page & {
+    padding-top: 20px;
+  }
+  }
+}
